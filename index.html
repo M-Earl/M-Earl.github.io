@@ -70,7 +70,9 @@ $(document).ready(function() {
     });
 	
 	if ($(window).width() < 767) {
-        $(this).animate({'opacity':'1'},500);
+	    $('.fadein').each( function(i){
+			$(this).animate({'opacity':'1'},500);
+		}
     }
 });
 </script>
