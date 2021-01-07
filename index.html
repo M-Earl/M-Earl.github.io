@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 	$('.fadein').each( function(i){
 
-		var bottomObjectAdjusted = $(this).position().top;
+		var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 250;
 		var bottomWindow = $(window).scrollTop() + $(window).height();
 
 		/* If the object is completely visible in the window, fade it it */
@@ -55,7 +55,7 @@ $(document).ready(function() {
         /* Check the location of each desired element */
         $('.fadein').each( function(i){
 
-            var bottomObjectAdjusted = $(this).position().top;
+            var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 200;
             var bottomWindow = $(window).scrollTop() + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
@@ -70,9 +70,8 @@ $(document).ready(function() {
     });
 	
 	if ($(window).width() < 767) {
-	    $(this).animate({'opacity':'1'},500);
-	}
-
+        $(this).animate({'opacity':'1'},500);
+    }
 });
 </script>
 <body class="bg-secondary">
