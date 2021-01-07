@@ -31,9 +31,10 @@
 .dropdown-menu :hover { background-color: #40ff00;}
 .dropdown-menu { background-color: grey;}
 .dropdown-menu { margin: 0;}
-.dropdown-item { -webkit-appearance: none;}
-.dropdown { -webkit-appearance: none;}
+.dropdown-item {-webkit-appearance: none;}
+.dropdown {-webkit-appearance: none;}
 .btn-block {-webkit-appearance: none;}
+.webkitFix {-webkit-appearance: none;}
 
 #smallSidebar {
 	transition: max-height 0.5s;
@@ -164,10 +165,10 @@ $(document).ready(function() {
 <div class="jumbotron mb-0 px-3 py-1 fadein showSmallHeader bg-dark">
 	<div class="row">
 		<div class="col">
-			<a type="button" href="index.html" class="fa fa-home text-left" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+			<a type="button" href="index.html" class="fa fa-home text-left webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
 		</div>
 		<div class="col">
-			<a type="button" onclick="smallSidebarOpen(this)" class="fa fa-bars text-right" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+			<a type="button" onclick="smallSidebarOpen(this)" class="fa fa-bars text-right webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
 		</div>
 	</div>
 </div> 
