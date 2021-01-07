@@ -32,6 +32,7 @@
 .dropdown-menu { background-color: grey;}
 .dropdown-menu { margin: 0;}
 .dropdown-item { -webkit-appearance: none;}
+.dropdown { -webkit-appearance: none;}
 </style>
 <script>
 $(document).ready(function() {
@@ -70,10 +71,10 @@ $(document).ready(function() {
     });
 	
 	if ($(window).width() < 767) {
-	    $('.fadein').each( function(i){
+		$('.fadein').each( function(i){
 			$(this).animate({'opacity':'1'},500);
-		}
-    }
+		});
+	}
 });
 </script>
 <body class="bg-secondary">
@@ -234,17 +235,17 @@ $(document).ready(function() {
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark"">
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
-      <a class="nav-link m-3 h5 text-white" href="#"><u>About the Fourier Transform</u></a>
+      <a class="nav-link m-3 h5 text-white text-center" href="#"><u>About the Fourier Transform</u></a>
 	  <a class="nav-link my-0 h5 text-center" href="aboutFourier.html">What Is The Fourier?</a>
 	  <a class="nav-link my-0 h5 text-center" href="#">Common Applications</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link m-3 h5 text-white" href="#"><u>Trading Applications</u></a>
+      <a class="nav-link m-3 h5 text-white text-center" href="#"><u>Trading Applications</u></a>
 	  <a class="nav-link my-0 h5 text-center" href="#">Current Volatility</a>
 	  <a class="nav-link my-0 h5 text-center" href="#">Fourier Volatility</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link m-3 h5 text-white" href="#"><u>Analysis</u></a>
+      <a class="nav-link m-3 h5 text-white text-center" href="#"><u>Analysis</u></a>
 	  <a class="nav-link my-0 h5 text-center" href="#">$VOO</a>
 	  <a class="nav-link my-0 h5 text-center" href="#">$SSO</a>
 	  <a class="nav-link my-0 h5 text-center" href="webAAPL.html">$AAPL</a>
@@ -252,7 +253,7 @@ $(document).ready(function() {
 	  <a class="nav-link my-0 h5 text-center" href="#">$KO</a>
     </li>
 	<li class="nav-item">
-      <a class="nav-link m-3 h5 text-white" href="#"><u>About the Author</u></a>
+      <a class="nav-link m-3 h5 text-white text-center" href="#"><u>About the Author</u></a>
 	  <a class="nav-link my-0 h5 text-center" href="#">Current Interests</a>
 	  <a class="nav-link my-0 h5 text-center" href="#">Portfolio Impacts</a>
     </li>
