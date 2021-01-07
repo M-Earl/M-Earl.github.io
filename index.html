@@ -33,10 +33,42 @@
 .dropdown-menu { margin: 0;}
 .dropdown-item { -webkit-appearance: none;}
 .dropdown { -webkit-appearance: none;}
-.button {-webkit-appearance: none;}
+.btn-block {-webkit-appearance: none;}
 .nav-link {-webkit-appearance: none;}
+
+#smallSidebar {
+	transition: max-height 0.5s;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+  .showLargeHeader {
+    display: none;
+  }
+  body {
+	background-color: blue;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .showSmallHeader {
+    display: none;
+  }
+  body {
+	background-color: #6c757d;
+  }
+}
+
 </style>
 <script>
+function smallSidebarOpen() {
+  document.getElementById("smallSidebar").style.maxHeight = "10rem";
+}
+
+function smallSidebarClose() {
+  document.getElementById("smallSidebar").style.maxHeight = "0rem";
+}
+
 $(document).ready(function() {
 
 	$('.fadein').each( function(i){
@@ -79,9 +111,8 @@ $(document).ready(function() {
 	}
 });
 </script>
-<body class="bg-secondary">
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar showLargeHeader navbar-expand-sm bg-dark navbar-dark">
   <ul class="navbar-nav mx-auto">
 	<div class="dropdown mx-3">
 	  <a class="btn text-white" type="button">
@@ -130,65 +161,84 @@ $(document).ready(function() {
   </ul>
 </nav>
 
+<div class="jumbotron mb-0 px-3 py-1 fadein showSmallHeader bg-dark">
+	<div class="row">
+		<div class="col">
+			<a type="button" href="index.html" class="fa fa-home text-left" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+		</div>
+		<div class="col">
+			<a type="button" onclick="smallSidebarOpen(this)" class="fa fa-bars text-right" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+		</div>
+	</div>
+</div> 
+
 <!END OF HEADER--------------------------------------------------------------------------------->
 <!END OF HEADER---------------------------------------------------------------------------------> 
 <!END OF HEADER---------------------------------------------------------------------------------> 
 <!END OF HEADER---------------------------------------------------------------------------------> 
 <!END OF HEADER---------------------------------------------------------------------------------> 
 
-<div class="jumbotron py-5 fadein" style="background-color:black">
-<h1 class="text-center text-white">Fourier Analysis and Stock Volatility</h1>      
-<p class="text-center text-white">A Detailed Investigation into the Use of the Fourier Transform to Measure Volatility on the US Stock Market</p>
-</div>    
+<!-- Sidebar -->
+<div class="" style="display:block;max-height:0;" id="smallSidebar">
+	<div class="fa fa-close text-right" onclick="smallSidebarClose()"></div>
+	<a href="#" class="btn btn-outline-dark btn-block">Link 1</a>
+	<a href="#" class="btn btn-outline-dark btn-block">Link 2</a>
+	<a href="#" class="btn btn-outline-dark btn-block">Link 3</a>
+</div>
 
-<div class="container fadein mt-5">
+<div class="jumbotron mb-3 fadein" style="background-color:black">
+	<h1 class="text-center text-white">Fourier Analysis and Stock Volatility</h1>      
+	<p class="text-center text-white">A Detailed Investigation into the Use of the Fourier Transform to Measure Volatility on the US Stock Market</p>
+</div>
+
+<div class="container fadein">
 	<div class="row">
-	  <div class="col-sm focus m-2 mb-5" style="background-color:black;">
+	  <div class="col-sm focus mx-2 mb-3" style="background-color:black;">
 		<i class="fa fa-bell m-2" style="font-size:10rem;color:#40ff00;display:inline-block;width:100%;text-align:center;"></i>
 	  	<div class="text-white h1 m-5 text-center" style="height:5rem;display:flex;justify-content:center;align-items:center;">About the Fourier</div>
-		<div class="text-white text-center">The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.</div>
+		<div class="text-white text-center mb-5">The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.</div>
 	  </div>
-	  <div class="col-sm focus m-2 mb-5" style="background-color:black;">
+	  <div class="col-sm focus mx-2 mb-3" style="background-color:black;">
 		<i class="fa fa-area-chart m-2" style="font-size:10rem;color:#40ff00;display:inline-block;width:100%;text-align:center;"></i>
-	  	<div class="text-white h1 my-5 text-center" style="height:5rem;display:flex;justify-content:center;align-items:center;">Trading Applications</div>
+	  	<div class="text-white h1 m-5 text-center" style="height:5rem;display:flex;justify-content:center;align-items:center;">Trading Applications</div>
 		<div class="text-white text-center mb-5">With a fundamental understanding of the Fourier Transform, one can start to see applications in the financial sector. With today's capitalization on volatility, it becomes crucial to quantify this aspect of securities.</div>
 	  </div>
-	  <div class="col-sm focus m-2 mb-5" style="background-color:black;">
+	  <div class="col-sm focus mx-2 mb-3" style="background-color:black;">
 		<i class="fa fa-check m-2" style="font-size:10rem;color:#40ff00;display:inline-block;width:100%;text-align:center;"></i>
-	  	<div class="text-white h1 my-5 text-center" style="height:5rem;display:flex;justify-content:center;align-items:center;">Analysis</div>
-		<div class="text-white text-center">A few example securities are examined to give real applications of this process. By contrasting them, patterns can be seen to show how volatility can be measured via the Fourier.</div>
+	  	<div class="text-white h1 m-5 text-center" style="height:5rem;display:flex;justify-content:center;align-items:center;">Analysis</div>
+		<div class="text-white text-center mb-5">A few example securities are examined to give real applications of this process. By contrasting them, patterns can be seen to show how volatility can be measured via the Fourier.</div>
 	  </div>
 	</div>
 </div>
 
 <div class="container fadein">
 	<div class="row mx-5">
-	  <div class="col mx-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+	  <div class="col mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 		<div class="card-body text-center h2">$VOO</div>
-		<button type="button" class="btn btn-outline-dark btn-block my-2">View Fourier</button></div>
-	  <div class="col mx-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+		<button type="button" class="btn btn-outline-dark btn-block mb-2">View Fourier</button></div>
+	  <div class="col mx-3 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 	  	<div class="card-body text-center h2 text-white">$SSO</div>
-		<button type="button" class="btn btn-outline-light btn-block my-2">View Fourier</button></div>
-	  <div class="col mx-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+		<button type="button" class="btn btn-outline-light btn-block mb-2">View Fourier</button></div>
+	  <div class="col mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 	  	<div class="card-body text-center h2">$AAPL</div>
-		<a type="button" href="webAAPL.html" class="btn btn-outline-dark btn-block my-2">View Fourier</a></div>
-	  <div class="col mx-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+		<a type="button" href="webAAPL.html" class="btn btn-outline-dark btn-block mb-2">View Fourier</a></div>
+	  <div class="col mx-3 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 	  	<div class="card-body text-center h2 text-white">$TSLA</div>
-		<button type="button" class="btn btn-outline-light btn-block my-2">View Fourier</button></div>
-	  <div class="col mx-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+		<button type="button" class="btn btn-outline-light btn-block mb-2">View Fourier</button></div>
+	  <div class="col mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 	  	<div class="card-body text-center h2">$KO</div>
-		<button type="button" class="btn btn-outline-dark btn-block my-2">View Fourier</button></div>
+		<button type="button" class="btn btn-outline-dark btn-block mb-2">View Fourier</button></div>
 	</div>
 </div>
 
-<div class="container my-5 fadein">
+<div class="container fadein">
 	<div class="row">
-	  <div class="col-sm m-2" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 	  <button type="button" class="btn" data-toggle="modal" data-target="#aaplModal">
 		<img src="AAPL.jpg" class="img-fluid rounded my-2" alt="Apple">
 	  </button>
 	  </div>
-	  <div class="col-sm m-2" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 	  <button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
 		<img src="AAPLF.jpg" class="img-fluid rounded my-2" alt="Apple Fourier">
 	  </button>
@@ -238,26 +288,26 @@ $(document).ready(function() {
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
       <a class="nav-link m-3 h5 text-white text-center" href="#"><u>About the Fourier Transform</u></a>
-	  <a class="nav-link my-0 h5 text-center" href="aboutFourier.html">What Is The Fourier?</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">Common Applications</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="aboutFourier.html">What Is The Fourier?</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Common Applications</a>
     </li>
     <li class="nav-item">
       <a class="nav-link m-3 h5 text-white text-center" href="#"><u>Trading Applications</u></a>
-	  <a class="nav-link my-0 h5 text-center" href="#">Current Volatility</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">Fourier Volatility</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Current Volatility</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Fourier Volatility</a>
     </li>
     <li class="nav-item">
       <a class="nav-link m-3 h5 text-white text-center" href="#"><u>Analysis</u></a>
-	  <a class="nav-link my-0 h5 text-center" href="#">$VOO</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">$SSO</a>
-	  <a class="nav-link my-0 h5 text-center" href="webAAPL.html">$AAPL</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">$TSLA</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">$KO</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$VOO</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$SSO</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="webAAPL.html">$AAPL</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$TSLA</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$KO</a>
     </li>
 	<li class="nav-item">
       <a class="nav-link m-3 h5 text-white text-center" href="#"><u>About the Author</u></a>
-	  <a class="nav-link my-0 h5 text-center" href="#">Current Interests</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">Portfolio Impacts</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Current Interests</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Portfolio Impacts</a>
     </li>
   </ul>
 </nav>
