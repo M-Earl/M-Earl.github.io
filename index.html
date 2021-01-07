@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 	$('.fadein').each( function(i){
 
-		var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight();
+		var bottomObjectAdjusted = $(this).position().top;
 		var bottomWindow = $(window).scrollTop() + $(window).height();
 
 		/* If the object is completely visible in the window, fade it it */
@@ -55,7 +55,7 @@ $(document).ready(function() {
         /* Check the location of each desired element */
         $('.fadein').each( function(i){
 
-            var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight();
+            var bottomObjectAdjusted = $(this).position().top;
             var bottomWindow = $(window).scrollTop() + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
@@ -68,6 +68,11 @@ $(document).ready(function() {
         }); 
 
     });
+	
+	if ($(window).width() < 767) {
+	    $(this).animate({'opacity':'1'},500);
+	}
+
 });
 </script>
 <body class="bg-secondary">
@@ -85,7 +90,7 @@ $(document).ready(function() {
 	  </div>
 	</div>
 	<div class="dropdown mx-3">
-	  <a class="btn text-white" href="webPage.html" type="button">
+	  <a class="btn text-white" href="index.html" type="button">
 	  	<i class="fa fa-area-chart m-2" style="font-size:1rem;color:#40ff00;"></i>
 		Trading Applications
 	  </a>
