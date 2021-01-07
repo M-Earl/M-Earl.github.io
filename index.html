@@ -42,12 +42,16 @@
 	-webkit-appearance: none;
 }
 
+#smallSidebarItem {background-color: #999999;}
+
+#smallSidebarItem:hover {background-color: #40ff00;}
+
 @media only screen and (max-width: 767px) {
   .showLargeHeader {
     display: none;
   }
   body {
-	background-color: blue;
+	background-color: #6c757d;
   }
 }
 
@@ -62,12 +66,15 @@
 
 </style>
 <script>
-function smallSidebarOpen() {
-  document.getElementById("smallSidebar").style.maxHeight = "10rem";
-}
-
-function smallSidebarClose() {
-  document.getElementById("smallSidebar").style.maxHeight = "0rem";
+function smallSidebarOpenClose() {
+	if (document.getElementById("smallSidebar").style.maxHeight == "25rem")
+	{
+		document.getElementById("smallSidebar").style.maxHeight = "0rem";
+	}
+	else
+	{
+		document.getElementById("smallSidebar").style.maxHeight = "25rem";
+	}
 }
 
 $(document).ready(function() {
@@ -168,7 +175,7 @@ $(document).ready(function() {
 			<a type="button" href="index.html" class="fa fa-home text-left webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
 		</div>
 		<div class="col">
-			<a type="button" onclick="smallSidebarOpen(this)" class="fa fa-bars text-right webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+			<a type="button" onclick="smallSidebarOpenClose()" class="fa fa-bars text-right webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
 		</div>
 	</div>
 </div> 
@@ -179,12 +186,13 @@ $(document).ready(function() {
 <!END OF HEADER---------------------------------------------------------------------------------> 
 <!END OF HEADER---------------------------------------------------------------------------------> 
 
-<!-- Sidebar -->
 <div class="" style="display:block;max-height:0;" id="smallSidebar">
-	<div class="fa fa-close text-right" onclick="smallSidebarClose()"></div>
-	<a href="#" class="btn btn-outline-dark btn-block">Link 1</a>
-	<a href="#" class="btn btn-outline-dark btn-block">Link 2</a>
-	<a href="#" class="btn btn-outline-dark btn-block">Link 3</a>
+	<a href="#" id="smallSidebarItem" class="btn btn-outline-dark btn-block">What Is The Fourier?</a>
+	<a href="#" id="smallSidebarItem" class="btn btn-outline-dark btn-block">Common Applications</a>
+	<a href="#" id="smallSidebarItem" class="btn btn-outline-dark btn-block">Trading Applications</a>
+	<a href="#" id="smallSidebarItem" class="btn btn-outline-dark btn-block">$VOO</a>
+	<a href="#" id="smallSidebarItem" class="btn btn-outline-dark btn-block">$SSO</a>
+	<a href="#" id="smallSidebarItem" class="btn btn-outline-dark btn-block">$AAPL</a>
 </div>
 
 <div class="jumbotron mb-3 fadein" style="background-color:black">
@@ -288,17 +296,17 @@ $(document).ready(function() {
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark"">
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
-      <a class="nav-link m-3 h5 text-white text-center" href="#"><u>About the Fourier Transform</u></a>
+      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>About the Fourier Transform</u></a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="aboutFourier.html">What Is The Fourier?</a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Common Applications</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link m-3 h5 text-white text-center" href="#"><u>Trading Applications</u></a>
+      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>Trading Applications</u></a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Current Volatility</a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Fourier Volatility</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link m-3 h5 text-white text-center" href="#"><u>Analysis</u></a>
+      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>Analysis</u></a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$VOO</a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$SSO</a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="webAAPL.html">$AAPL</a>
@@ -306,7 +314,7 @@ $(document).ready(function() {
 	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$KO</a>
     </li>
 	<li class="nav-item">
-      <a class="nav-link m-3 h5 text-white text-center" href="#"><u>About the Author</u></a>
+      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>About the Author</u></a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Current Interests</a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Portfolio Impacts</a>
     </li>
