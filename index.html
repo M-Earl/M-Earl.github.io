@@ -44,11 +44,17 @@
 
 #smallSidebarItem {background-color: #999999;}
 
-#smallSidebarItem:hover {background-color: #40ff00;}
+#smallSidebarItem:focus {background-color: #40ff00 !important;}
 
 @media only screen and (max-width: 767px) {
   .showLargeHeader {
     display: none;
+  }
+  .showLargeScreen {
+	display: none;
+  }
+  #continueToText {
+	font-size:6vw;
   }
   body {
 	background-color: #6c757d;
@@ -58,6 +64,9 @@
 @media only screen and (min-width: 768px) {
   .showSmallHeader {
     display: none;
+  }
+  .showSmallScreen {
+	display: none;
   }
   body {
 	background-color: #6c757d;
@@ -172,21 +181,21 @@ $(document).ready(function() {
 <div class="jumbotron mb-0 px-3 py-1 fadein showSmallHeader bg-dark">
 	<div class="row">
 		<div class="col">
-			<a type="button" href="index.html" class="fa fa-home text-left webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+			<a type="button" href="index.html" class="fa fa-home text-left webkitFix" style="font-size:2rem;color:#40ff00;display:inline-block;width:100%;"></a>
 		</div>
 		<div class="col">
-			<a type="button" onclick="smallSidebarOpenClose()" class="fa fa-bars text-right webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+			<a type="button" onclick="smallSidebarOpenClose()" class="fa fa-bars text-right webkitFix" style="font-size:2rem;color:#40ff00;display:inline-block;width:100%;"></a>
 		</div>
 	</div>
 </div> 
 
 <div class="" style="display:block;max-height:0;" id="smallSidebar">
-	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">What Is The Fourier?</a>
-	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Common Applications</a>
-	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Trading Applications</a>
-	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$VOO</a>
-	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$SSO</a>
-	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$AAPL</a>
+	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">What Is The Fourier?</a>
+	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Common Applications</a>
+	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Trading Applications</a>
+	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$VOO</a>
+	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$SSO</a>
+	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$AAPL</a>
 </div>
 
 <!END OF HEADER--------------------------------------------------------------------------------->
@@ -253,6 +262,48 @@ $(document).ready(function() {
 	  </button>
 	  </div>
 	</div>
+</div>
+
+<div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
+	<h1 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">$AAPL</a></h1>      
+</div>
+
+<div class="container fadein">
+	<div class="row">
+	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+	  <button type="button" class="btn" data-toggle="modal" data-target="#aaplModal">
+		<img src="cosWave.svg" class="img-fluid rounded my-2" alt="Apple">
+	  </button>
+	  </div>
+	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+	  <button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
+		<img src="cosWaveFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+	  </button>
+	  </div>
+	</div>
+</div>
+
+<div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
+	<h1 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">About the Fourier</a></h1>      
+</div>
+
+<div class="container fadein">
+	<div class="row">
+	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+	  <button type="button" class="btn" data-toggle="modal" data-target="#aaplModal">
+		<img src="tradingApplications.svg" class="img-fluid rounded my-2" alt="Apple">
+	  </button>
+	  </div>
+	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
+	  <button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
+		<img src="tradingApplicationsFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+	  </button>
+	  </div>
+	</div>
+</div>
+
+<div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
+	<h1 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">Trading Applications</a></h1>      
 </div>
 
 <div class="modal fade" id="aaplModal" role="dialog">
