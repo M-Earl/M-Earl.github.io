@@ -50,6 +50,9 @@
   .showLargeHeader {
     display: none;
   }
+  .showLargeScreen {
+	display: none;
+  }
   body {
 	background-color: #6c757d;
   }
@@ -58,6 +61,9 @@
 @media only screen and (min-width: 768px) {
   .showSmallHeader {
     display: none;
+  }
+  .showSmallScreen {
+	display: none;
   }
   body {
 	background-color: #6c757d;
@@ -172,10 +178,10 @@ $(document).ready(function() {
 <div class="jumbotron mb-0 px-3 py-1 fadein showSmallHeader bg-dark">
 	<div class="row">
 		<div class="col">
-			<a type="button" href="index.html" class="fa fa-home text-left webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+			<a type="button" href="index.html" class="fa fa-home text-left webkitFix" style="font-size:2rem;color:#40ff00;display:inline-block;width:100%;"></a>
 		</div>
 		<div class="col">
-			<a type="button" onclick="smallSidebarOpenClose()" class="fa fa-bars text-right webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+			<a type="button" onclick="smallSidebarOpenClose()" class="fa fa-bars text-right webkitFix" style="font-size:2rem;color:#40ff00;display:inline-block;width:100%;"></a>
 		</div>
 	</div>
 </div> 
@@ -195,17 +201,17 @@ $(document).ready(function() {
 <!END OF HEADER---------------------------------------------------------------------------------> 
 <!END OF HEADER---------------------------------------------------------------------------------> 
 
-<div class="jumbotron py-5 fadein" style="background-color:black">
-<h1 class="text-center text-white">$AAPL</h1>      
-<p class="text-center text-white">Apple Corporation</p>
+<div class="jumbotron mb-3 fadein" style="background-color:black">
+<h1 class="text-center text-white" style="font-size:4vw">$AAPL</h1>      
+<p class="text-center text-white" style="font-size:2vw">Apple Corporation</p>
 </div>  
 
-<div class="container fadein">
+<div class="container fadein showLargeScreen">
 	<div class="row">
-	  <div class="col-sm m-2 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
 		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
 	  </div>
-	  <div class="col-sm m-2" style="background-color:black">
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	    <button type="button" class="btn" data-toggle="modal" data-target="#aaplReturnsModal">
 		  <img src="AAPLReturns.svg" class="img-fluid rounded my-2" alt="Apple">
 		</button>
@@ -213,25 +219,25 @@ $(document).ready(function() {
 	</div>
 </div>
 
-<div class="container fadein">
+<div class="container fadein showLargeScreen">
 	<div class="row">
-      <div class="col-sm m-2" style="background-color:black">
+      <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModal">
 	      <img src="AAPL.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
       </div>
-	  <div class="col-sm m-2 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
 		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
 	  </div>
 	</div>
 </div>
 
-<div class="container fadein">
+<div class="container fadein showLargeScreen">
 	<div class="row">
-	  <div class="col-sm m-2 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
 		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
 	  </div>
-	  <div class="col-sm m-2" style="background-color:black">
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
 		  <img src="AAPLFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
@@ -239,15 +245,67 @@ $(document).ready(function() {
 	</div>
 </div>
 
-<div class="container fadein">
+<div class="container fadein showLargeScreen">
 	<div class="row">
-	  <div class="col-sm m-2 mb-5" style="background-color:black">
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
 		  <img src="freqContent.png" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
 	  </div>
-	  <div class="col-sm m-2 mb-5 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
 		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+	  </div>
+	</div>
+</div>
+
+<div class="container fadein showSmallScreen">
+	<div class="row">
+	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+	  </div>
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
+	    <button type="button" class="btn" data-toggle="modal" data-target="#aaplReturnsModal">
+		  <img src="AAPLReturns.svg" class="img-fluid rounded my-2" alt="Apple">
+		</button>
+	  </div>
+	</div>
+</div>
+
+<div class="container fadein showSmallScreen">
+	<div class="row">
+	  <div class="col-sm mx-2 mb-3 p-2 text-white" style="background-color:black; font-size:2vw; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+	  </div>
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModal">
+	      <img src="AAPL.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
+      </div>
+	</div>
+</div>
+
+<div class="container fadein showSmallScreen">
+	<div class="row">
+	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+	  </div>
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
+		  <img src="AAPLFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
+	  </div>
+	</div>
+</div>
+
+<div class="container fadein showSmallScreen">
+	<div class="row">
+	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+	  </div>
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
+		  <img src="freqContent.png" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
 	  </div>
 	</div>
 </div>
@@ -321,27 +379,27 @@ $(document).ready(function() {
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark"">
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
-      <a class="nav-link m-3 h5 text-white" href="#"><u>About the Fourier Transform</u></a>
-	  <a class="nav-link my-0 h5 text-center" href="aboutFourier.html">What Is The Fourier?</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">Common Applications</a>
+      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>About the Fourier Transform</u></a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="aboutFourier.html">What Is The Fourier?</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Common Applications</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link m-3 h5 text-white" href="#"><u>Trading Applications</u></a>
-	  <a class="nav-link my-0 h5 text-center" href="#">Current Volatility</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">Fourier Volatility</a>
+      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>Trading Applications</u></a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Current Volatility</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Fourier Volatility</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link m-3 h5 text-white" href="#"><u>Analysis</u></a>
-	  <a class="nav-link my-0 h5 text-center" href="#">$VOO</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">$SSO</a>
-	  <a class="nav-link my-0 h5 text-center" href="webAAPL.html">$AAPL</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">$TSLA</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">$KO</a>
+      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>Analysis</u></a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$VOO</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$SSO</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="AAPL.html">$AAPL</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$TSLA</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$KO</a>
     </li>
 	<li class="nav-item">
-      <a class="nav-link m-3 h5 text-white" href="#"><u>About the Author</u></a>
-	  <a class="nav-link my-0 h5 text-center" href="#">Current Interests</a>
-	  <a class="nav-link my-0 h5 text-center" href="#">Portfolio Impacts</a>
+      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>About the Author</u></a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Current Interests</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Portfolio Impacts</a>
     </li>
   </ul>
 </nav>
