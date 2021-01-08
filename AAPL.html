@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+.focus {
+	box-shadow: .2rem .2rem 1rem .1rem #262626;
+	transition: box-shadow 0.5s;
+}
+.focus:hover {
+	box-shadow: 1rem 1rem 1rem .5rem #262626;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.fadein
+{
+    opacity:0;
+}
+.btn-outline-dark:hover {
+	background-color: black;
+}
+.dropdown-menu :hover { background-color: #40ff00;}
+.dropdown-menu { background-color: grey;}
+.dropdown-menu { margin: 0;}
+.dropdown-item {-webkit-appearance: none;}
+.dropdown {-webkit-appearance: none;}
+.btn-block {-webkit-appearance: none;}
+.webkitFix {-webkit-appearance: none;}
+
+#smallSidebar {
+	transition: max-height 0.5s;
+	overflow: hidden;
+	-webkit-appearance: none;
+}
+
+#smallSidebarItem {background-color: #999999;}
+
+#smallSidebarItem:hover {background-color: #40ff00;}
+
+@media only screen and (max-width: 767px) {
+  .showLargeHeader {
+    display: none;
+  }
+  body {
+	background-color: #6c757d;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .showSmallHeader {
+    display: none;
+  }
+  body {
+	background-color: #6c757d;
+  }
+}
+
+</style>
+<script>
+function smallSidebarOpenClose() {
+	if (document.getElementById("smallSidebar").style.maxHeight == "25rem")
+	{
+		document.getElementById("smallSidebar").style.maxHeight = "0rem";
+	}
+	else
+	{
+		document.getElementById("smallSidebar").style.maxHeight = "25rem";
+	}
+}
+
+$(document).ready(function() {
+
+	$('.fadein').each( function(i){
+
+		var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 250;
+		var bottomWindow = $(window).scrollTop() + $(window).height();
+
+		/* If the object is completely visible in the window, fade it it */
+		if( bottomWindow > bottomObjectAdjusted ){
+
+			$(this).animate({'opacity':'1'},500);
+
+		}
+
+	}); 
+	
+	/* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+        /* Check the location of each desired element */
+        $('.fadein').each( function(i){
+
+            var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 200;
+            var bottomWindow = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottomWindow > bottomObjectAdjusted ){
+
+                $(this).animate({'opacity':'1'},500);
+
+            }
+
+        }); 
+
+    });
+	
+	if ($(window).width() < 767) {
+		$('.fadein').each( function(i){
+			$(this).animate({'opacity':'1'},500);
+		});
+	}
+});
+</script>
+
+<nav class="navbar showLargeHeader navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav mx-auto">
+	<div class="dropdown mx-3">
+	  <a class="btn text-white" type="button">
+	  	<i class="fa fa-arrows-v m-2" style="font-size:1rem;color:#40ff00;"></i>
+		About the Fourier Transform
+	  </a>
+	  <div class="dropdown-menu" style="width:100%;text-align:center;">
+		<a class="dropdown-item text-white" href="aboutFourier.html" type="button">What Is The Fourier?</a>
+		<button class="dropdown-item text-white" type="button">Common Applications</button>
+	  </div>
+	</div>
+	<div class="dropdown mx-3">
+	  <a class="btn text-white" href="index.html" type="button">
+	  	<i class="fa fa-area-chart m-2" style="font-size:1rem;color:#40ff00;"></i>
+		Trading Applications
+	  </a>
+	  <div class="dropdown-menu" style="width:100%;text-align:center;">
+		<button class="dropdown-item text-white" type="button">Trading Applications</button>
+		<button class="dropdown-item text-white" type="button">Current Volatility</button>
+		<button class="dropdown-item text-white" type="button">Fourier Volatility</button>
+	  </div>
+	</div>
+	<div class="dropdown mx-3">
+	  <a class="btn text-white" type="button">
+	  	<i class="fa fa-check m-2" style="font-size:1rem;color:#40ff00;"></i>
+		Analysis
+	  </a>
+	  <div class="dropdown-menu" style="width:100%;text-align:center;">
+		<a class="dropdown-item text-white" href="AAPL.html" type="button">$VOO</a>
+		<a class="dropdown-item text-white" href="AAPL.html" type="button">$SSO</a>
+		<a class="dropdown-item text-white" href="AAPL.html" type="button">$AAPL</a>
+		<a class="dropdown-item text-white" href="AAPL.html" type="button">$TSLA</a>
+		<a class="dropdown-item text-white" href="AAPL.html" type="button">$KO</a>
+	  </div>
+	</div>
+	<div class="dropdown mx-3">
+	  <a class="btn text-white" type="button">
+	  	<i class="fa fa-user-circle m-2" style="font-size:1rem;color:#40ff00;"></i>
+		About the Author
+	  </a>
+	  <div class="dropdown-menu" style="width:100%;text-align:center;">
+		<button class="dropdown-item text-white" type="button">Current Interests</button>
+		<button class="dropdown-item text-white" type="button">Portfolio Impacts</button>
+	  </div>
+	</div>
+  </ul>
+</nav>
+
+<div class="jumbotron mb-0 px-3 py-1 fadein showSmallHeader bg-dark">
+	<div class="row">
+		<div class="col">
+			<a type="button" href="index.html" class="fa fa-home text-left webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+		</div>
+		<div class="col">
+			<a type="button" onclick="smallSidebarOpenClose()" class="fa fa-bars text-right webkitFix" style="font-size:3rem;color:#40ff00;display:inline-block;width:100%;"></a>
+		</div>
+	</div>
+</div> 
+
+<div class="" style="display:block;max-height:0;" id="smallSidebar">
+	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">What Is The Fourier?</a>
+	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Common Applications</a>
+	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Trading Applications</a>
+	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$VOO</a>
+	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$SSO</a>
+	<a href="#" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$AAPL</a>
+</div>
+
+<!END OF HEADER--------------------------------------------------------------------------------->
+<!END OF HEADER---------------------------------------------------------------------------------> 
+<!END OF HEADER---------------------------------------------------------------------------------> 
+<!END OF HEADER---------------------------------------------------------------------------------> 
+<!END OF HEADER---------------------------------------------------------------------------------> 
+
+<div class="jumbotron py-5 fadein" style="background-color:black">
+<h1 class="text-center text-white">$AAPL</h1>      
+<p class="text-center text-white">Apple Corporation</p>
+</div>  
+
+<div class="container fadein">
+	<div class="row">
+	  <div class="col-sm m-2 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+	  </div>
+	  <div class="col-sm m-2" style="background-color:black">
+	    <button type="button" class="btn" data-toggle="modal" data-target="#aaplReturnsModal">
+		  <img src="AAPLReturns.svg" class="img-fluid rounded my-2" alt="Apple">
+		</button>
+	  </div>
+	</div>
+</div>
+
+<div class="container fadein">
+	<div class="row">
+      <div class="col-sm m-2" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModal">
+	      <img src="AAPL.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
+      </div>
+	  <div class="col-sm m-2 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+	  </div>
+	</div>
+</div>
+
+<div class="container fadein">
+	<div class="row">
+	  <div class="col-sm m-2 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+	  </div>
+	  <div class="col-sm m-2" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
+		  <img src="AAPLFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
+	  </div>
+	</div>
+</div>
+
+<div class="container fadein">
+	<div class="row">
+	  <div class="col-sm m-2 mb-5" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
+		  <img src="freqContent.png" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
+	  </div>
+	  <div class="col-sm m-2 mb-5 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+	  </div>
+	</div>
+</div>
+
+<div class="modal fade" id="aaplReturnsModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+		<img style="width: 100%" src="AAPLReturns.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="aaplModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+		<img style="width: 100%" src="AAPL.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="aaplModalF" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+		<img style="width: 100%" src="AAPLFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="freqContent" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+		<img style="width: 100%" src="freqContent.png" class="img-fluid rounded my-2" alt="Apple Fourier">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!START OF FOOTER------------------------------------------------------------------------------->
+<!START OF FOOTER------------------------------------------------------------------------------->
+<!START OF FOOTER------------------------------------------------------------------------------->
+<!START OF FOOTER------------------------------------------------------------------------------->
+<!START OF FOOTER------------------------------------------------------------------------------->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark"">
+  <ul class="navbar-nav mx-auto">
+    <li class="nav-item">
+      <a class="nav-link m-3 h5 text-white" href="#"><u>About the Fourier Transform</u></a>
+	  <a class="nav-link my-0 h5 text-center" href="aboutFourier.html">What Is The Fourier?</a>
+	  <a class="nav-link my-0 h5 text-center" href="#">Common Applications</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link m-3 h5 text-white" href="#"><u>Trading Applications</u></a>
+	  <a class="nav-link my-0 h5 text-center" href="#">Current Volatility</a>
+	  <a class="nav-link my-0 h5 text-center" href="#">Fourier Volatility</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link m-3 h5 text-white" href="#"><u>Analysis</u></a>
+	  <a class="nav-link my-0 h5 text-center" href="#">$VOO</a>
+	  <a class="nav-link my-0 h5 text-center" href="#">$SSO</a>
+	  <a class="nav-link my-0 h5 text-center" href="webAAPL.html">$AAPL</a>
+	  <a class="nav-link my-0 h5 text-center" href="#">$TSLA</a>
+	  <a class="nav-link my-0 h5 text-center" href="#">$KO</a>
+    </li>
+	<li class="nav-item">
+      <a class="nav-link m-3 h5 text-white" href="#"><u>About the Author</u></a>
+	  <a class="nav-link my-0 h5 text-center" href="#">Current Interests</a>
+	  <a class="nav-link my-0 h5 text-center" href="#">Portfolio Impacts</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="text-light bg-dark p-3 text-center">
+	<p class="m-0 mt-2">Intellectual Property of Michael Earl.</p>
+	<p class="m-0">All Rights Reserved.</p>
+</div>
+
+</body>
+</html>
