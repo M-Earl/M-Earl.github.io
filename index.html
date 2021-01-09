@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bootstrap Example</title>
+  <title>Fourier Stock Analysis</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -52,6 +52,10 @@
   }
   .showLargeScreen {
 	display: none;
+  }
+  .noMarginPaddingSmallScreen {
+	margin: 0 !important;
+	padding: 0 !important;
   }
   #continueToText {
 	font-size:6vw;
@@ -131,6 +135,9 @@ $(document).ready(function() {
 
 <nav class="navbar showLargeHeader navbar-expand-sm bg-dark navbar-dark">
   <ul class="navbar-nav mx-auto">
+    <a class="btn text-white" type="button">
+	  <i class="fa fa-home m-2" style="font-size:1rem;color:#40ff00;"></i>
+    </a>
 	<div class="dropdown mx-3">
 	  <a class="btn text-white" type="button">
 	  	<i class="fa fa-arrows-v m-2" style="font-size:1rem;color:#40ff00;"></i>
@@ -229,8 +236,8 @@ $(document).ready(function() {
 	</div>
 </div>
 
-<div class="container fadein">
-	<div class="row mx-5">
+<div class="container noMarginPaddingSmallScreen fadein">
+	<div class="row mx-5 noMarginPaddingSmallScreen">
 	  <div class="col mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 		<div class="card-body text-center h2">$VOO</div>
 		<button type="button" class="btn btn-outline-dark btn-block mb-2">View Fourier</button></div>
@@ -265,7 +272,7 @@ $(document).ready(function() {
 </div>
 
 <div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
-	<h1 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">$AAPL</a></h1>      
+	<h2 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">$AAPL</a></h1>      
 </div>
 
 <div class="container fadein">
@@ -284,7 +291,7 @@ $(document).ready(function() {
 </div>
 
 <div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
-	<h1 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">About the Fourier</a></h1>      
+	<h2 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">About the Fourier</a></h1>      
 </div>
 
 <div class="container fadein">
@@ -303,7 +310,7 @@ $(document).ready(function() {
 </div>
 
 <div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
-	<h1 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">Trading Applications</a></h1>      
+	<h2 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">Trading Applications</a></h1>      
 </div>
 
 <div class="modal fade" id="aaplModal" role="dialog">
