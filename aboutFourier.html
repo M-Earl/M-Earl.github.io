@@ -30,7 +30,7 @@
 <div class="container fadein">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier Transform works and behaves. The Discrete Fourier Transform (DFT) converts discrete time sequences to discrete frequency based sequences. Now, this sounds confusing without an example. Consider sound. Suppose we have the following A note shown to the right here:
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier Transform works and behaves. The Discrete Fourier Transform (DFT) converts discrete time sequences to discrete frequency based sequences. Consider the example of sound. Suppose we have the A note shown in the figure.
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	    <button type="button" class="btn" data-toggle="modal" data-target="#cosTwo">
@@ -48,7 +48,7 @@
 		</button>
       </div>
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		Now to the left is the DFT of the time sequence above. Since all sound is made up of sinusoids, a single note comes as no surprise as being represented by a single cosine. Notice how a single frequnecy is isolated, the frequency that the A note resonates at, XX Hz. This shows how the Fourier Transform can be used to isolate particular frequencies in audio.
+		The next figure is the DFT of the time sequence above. Since all sound is made up of sinusoids, a single note is represented by a single cosine. Notice how in the DFT a single frequnecy is isolated, the frequency that the A note resonates at, 440 Hz. This shows how the Fourier Transform can be used to isolate particular frequencies in audio.
 	  </div>
 	</div>
 </div>
@@ -56,7 +56,7 @@
 <div class="container fadein">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		Ok well that's interesting but where could it be useful. Well consider the time-based signal on the left. It is made up of three distinct notes: X, X, and X. However, this is by no means clear by simply looking at the signal. So how would one decipher the composition of this signal if they did not know the individual elements?
+		Now consider the more advanced signal shown. It is made up of two distinct frequencies, 440 Hz, and 1760 Hz. However, this is not clear by simply looking at the signal in the time domain. So how would one decipher the composition of this signal if they did not know the individual elements?
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#cos">
@@ -74,7 +74,7 @@
 		</button>
       </div>
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		This is where the Fourier Transform shines. Look at the graph at the right. It is now clear what the three frequencies are that make up the sound signal. This has many audio applications. For example, if you know that the basist of your band his instrument at low frequencies, you can isolate the noise in his amp (which will be at higher frequencies) via Fourier Analysis and construct a low pass filter to remove those frequencies. In our example, it would be like allowing the X and X notes to shine through, while removing the undesirable X note.
+		This is where the Fourier Transform shines. Observe the graph shown. It is now clear what the two frequencies are that make up the sound signal. This has many audio applications. For example, if you know that the basist of your band his instrument at low frequencies, you can isolate the noise in his amp (which will be at higher frequencies) via Fourier Analysis and construct a low pass filter to remove those frequencies. In the given example, this would be like allowing the 1760 Hz to shine through, while removing the undesirable 440 Hz signal.
 	  </div>
 	</div>
 </div>
