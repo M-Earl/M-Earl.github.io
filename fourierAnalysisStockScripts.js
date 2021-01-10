@@ -7,7 +7,7 @@ function smallSidebarOpenClose() {
 	else
 	{
 		document.getElementById("smallSidebar").style.maxHeight = "25rem";
-		document.getElementById("smallSidebar").style.marginBottom = "1rem";
+		document.getElementById("smallSidebar").style.marginBottom = "0.6rem";
 	}
 }
 
