@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fourier Stock Analysis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fourierAnalysisStockStyles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="fourierAnalysisStockScripts.js"></script>
+</head>
+
+<body>
+<div id="header"></div>
+
+<!END OF HEADER--------------------------------------------------------------------------------->
+<!END OF HEADER---------------------------------------------------------------------------------> 
+<!END OF HEADER---------------------------------------------------------------------------------> 
+<!END OF HEADER---------------------------------------------------------------------------------> 
+<!END OF HEADER---------------------------------------------------------------------------------> 
+
+<div class="jumbotron mb-3 fadein" style="background-color:black">
+	<h1 class="text-center text-white">Current Interests</h1>      
+	<p class="text-center text-white">About the Author's Personal Interests</p>
+</div>  
+
+<div class="container fadein">
+	<div class="row">
+	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier Transform works and behaves. The Discrete Fourier Transform (DFT) converts discrete time sequences to discrete frequency based sequences. Now, this sounds confusing without an example. Consider sound. Suppose we have the following A note shown to the right here:
+	  </div>
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
+	    <button type="button" class="btn" data-toggle="modal" data-target="#cosTwo">
+		  <img src="tradingApplications.svg" class="img-fluid rounded my-2" alt="Apple">
+		</button>
+	  </div>
+	</div>
+</div>
+
+<div class="container fadein">
+	<div class="row">
+      <div class="col-sm mx-2 mb-3" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#cosTwoF">
+		  <img src="tradingApplicationsFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
+      </div>
+	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		Now to the left is the DFT of the time sequence above. Since all sound is made up of sinusoids, a single note comes as no surprise as being represented by a single cosine. Notice how a single frequnecy is isolated, the frequency that the A note resonates at, XX Hz. This shows how the Fourier Transform can be used to isolate particular frequencies in audio.
+	  </div>
+	</div>
+</div>
+
+<!START OF FOOTER------------------------------------------------------------------------------->
+<!START OF FOOTER------------------------------------------------------------------------------->
+<!START OF FOOTER------------------------------------------------------------------------------->
+<!START OF FOOTER------------------------------------------------------------------------------->
+<!START OF FOOTER------------------------------------------------------------------------------->
+
+<div id="footer"></div>
+
+</body>
+</html>
