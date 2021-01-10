@@ -6,207 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fourierAnalysisStockStyles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="fourierAnalysisStockScripts.js"></script>
 </head>
-<style>
-.container a {
-    text-decoration: none;
-}
-.focus {
-	box-shadow: .2rem .2rem 1rem .1rem #262626;
-	transition: box-shadow 0.5s;
-}
-.focus:hover {
-	box-shadow: 1rem 1rem 1rem .5rem #262626;
-}
-.dropdown:hover>.dropdown-menu {
-  display: block;
-}
-.fadein
-{
-    opacity:0;
-}
-.btn-outline-dark:hover {
-	background-color: black;
-}
-.dropdown-menu :hover { background-color: #40ff00;}
-.dropdown-menu { background-color: grey;}
-.dropdown-menu { margin: 0;}
-.dropdown-item {-webkit-appearance: none;}
-.dropdown {-webkit-appearance: none;}
-.btn-block {-webkit-appearance: none;}
-.webkitFix {-webkit-appearance: none;}
-
-#smallSidebar {
-	transition: max-height 0.5s;
-	overflow: hidden;
-	-webkit-appearance: none;
-}
-
-#smallSidebarItem {background-color: #999999;}
-
-#smallSidebarItem:focus {background-color: #40ff00 !important;}
-
-@media only screen and (max-width: 767px) {
-  .showLargeHeader {
-    display: none;
-  }
-  .showLargeScreen {
-	display: none;
-  }
-  .noMarginPaddingSmallScreen {
-	margin: 0 !important;
-	padding: 0 !important;
-  }
-  #continueToText {
-	font-size:6vw;
-  }
-  body {
-	background-color: #6c757d;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .showSmallHeader {
-    display: none;
-  }
-  .showSmallScreen {
-	display: none;
-  }
-  body {
-	background-color: #6c757d;
-  }
-}
-
-</style>
+	
 <script>
-function smallSidebarOpenClose() {
-	if (document.getElementById("smallSidebar").style.maxHeight == "25rem")
-	{
-		document.getElementById("smallSidebar").style.maxHeight = "0rem";
-	}
-	else
-	{
-		document.getElementById("smallSidebar").style.maxHeight = "25rem";
-	}
-}
-
-$(document).ready(function() {
-
-	$('.fadein').each( function(i){
-
-		var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 250;
-		var bottomWindow = $(window).scrollTop() + $(window).height();
-
-		/* If the object is completely visible in the window, fade it it */
-		if( bottomWindow > bottomObjectAdjusted ){
-
-			$(this).animate({'opacity':'1'},500);
-
-		}
-
-	}); 
-	
-	/* Every time the window is scrolled ... */
-    $(window).scroll( function(){
-        /* Check the location of each desired element */
-        $('.fadein').each( function(i){
-
-            var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 200;
-            var bottomWindow = $(window).scrollTop() + $(window).height();
-
-            /* If the object is completely visible in the window, fade it it */
-            if( bottomWindow > bottomObjectAdjusted ){
-
-                $(this).animate({'opacity':'1'},500);
-
-            }
-
-        }); 
-
-    });
-	
-	if ($(window).width() < 767) {
-		$('.fadein').each( function(i){
-			$(this).animate({'opacity':'1'},500);
-		});
-	}
-});
+	$(function(){
+		$("#header").load("header.html");
+	});
 </script>
 
-<nav class="navbar showLargeHeader navbar-expand-sm bg-dark navbar-dark">
-  <ul class="navbar-nav mx-auto">
-    <a class="btn text-white" type="button" href="index.html">
-	  <i class="fa fa-home m-2" style="font-size:1rem;color:#40ff00;"></i>
-    </a>
-	<div class="dropdown mx-3">
-	  <a class="btn text-white" type="button">
-	  	<i class="fa fa-arrows-v m-2" style="font-size:1rem;color:#40ff00;"></i>
-		About the Fourier Transform
-	  </a>
-	  <!--<div class="dropdown-menu" style="width:100%;text-align:center;">
-		<a class="dropdown-item text-white" href="aboutFourier.html" type="button">What Is The Fourier?</a>
-		<button class="dropdown-item text-white" type="button">Common Applications</button>
-	  </div>-->
-	</div>
-	<div class="dropdown mx-3">
-	  <a class="btn text-white" href="index.html" type="button">
-	  	<i class="fa fa-area-chart m-2" style="font-size:1rem;color:#40ff00;"></i>
-		Trading Applications
-	  </a>
-	  <!--<div class="dropdown-menu" style="width:100%;text-align:center;">
-		<button class="dropdown-item text-white" type="button">Trading Applications</button>
-		<button class="dropdown-item text-white" type="button">Current Volatility</button>
-		<button class="dropdown-item text-white" type="button">Fourier Volatility</button>
-	  </div>-->
-	</div>
-	<div class="dropdown mx-3">
-	  <a class="btn text-white" type="button">
-	  	<i class="fa fa-check m-2" style="font-size:1rem;color:#40ff00;"></i>
-		Analysis
-	  </a>
-	  <div class="dropdown-menu" style="width:100%;text-align:center;">
-		<a class="dropdown-item text-white" href="AAPL.html" type="button">$VOO</a>
-		<a class="dropdown-item text-white" href="AAPL.html" type="button">$SSO</a>
-		<a class="dropdown-item text-white" href="AAPL.html" type="button">$AAPL</a>
-		<a class="dropdown-item text-white" href="AAPL.html" type="button">$TSLA</a>
-		<a class="dropdown-item text-white" href="AAPL.html" type="button">$KO</a>
-	  </div>
-	</div>
-	<div class="dropdown mx-3">
-	  <a class="btn text-white" type="button">
-	  	<i class="fa fa-user-circle m-2" style="font-size:1rem;color:#40ff00;"></i>
-		About the Author
-	  </a>
-	  <div class="dropdown-menu" style="width:100%;text-align:center;">
-		<button class="dropdown-item text-white" type="button">Current Interests</button>
-		<button class="dropdown-item text-white" type="button">Portfolio Impacts</button>
-	  </div>
-	</div>
-  </ul>
-</nav>
-
-<div class="jumbotron mb-0 px-3 py-1 fadein showSmallHeader bg-dark">
-	<div class="row">
-		<div class="col">
-			<a type="button" href="index.html" class="fa fa-home text-left webkitFix" style="font-size:2rem;color:#40ff00;display:inline-block;width:100%;"></a>
-		</div>
-		<div class="col">
-			<a type="button" onclick="smallSidebarOpenClose()" class="fa fa-bars text-right webkitFix" style="font-size:2rem;color:#40ff00;display:inline-block;width:100%;"></a>
-		</div>
-	</div>
-</div> 
-
-<div class="" style="display:block;max-height:0;" id="smallSidebar">
-	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">What Is The Fourier?</a>
-	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Common Applications</a>
-	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Trading Applications</a>
-	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$VOO</a>
-	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$SSO</a>
-	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$AAPL</a>
-</div>
+<body>
+<div id="header"></div>
 
 <!END OF HEADER--------------------------------------------------------------------------------->
 <!END OF HEADER---------------------------------------------------------------------------------> 
@@ -221,12 +35,12 @@ $(document).ready(function() {
 
 <div class="container fadein">
 	<div class="row">
-	  <a class="col-sm focus mx-2 mb-3" style="background-color:black;" href="index.html">
+	  <a class="col-sm focus mx-2 mb-3" style="background-color:black;" href="aboutFourier.html">
 		<i class="fa fa-bell m-2" style="font-size:10rem;color:#40ff00;display:inline-block;width:100%;text-align:center;"></i>
 	  	<div class="text-white h1 m-5 text-center" style="height:5rem;display:flex;justify-content:center;align-items:center;">About the Fourier</div>
 		<div class="text-white text-center mb-5">The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.</div>
 	  </a>
-	  <a class="col-sm focus mx-2 mb-3" style="background-color:black;" href="index.html">
+	  <a class="col-sm focus mx-2 mb-3" style="background-color:black;" href="tradingApplications.html">
 		<i class="fa fa-area-chart m-2" style="font-size:10rem;color:#40ff00;display:inline-block;width:100%;text-align:center;"></i>
 	  	<div class="text-white h1 m-5 text-center" style="height:5rem;display:flex;justify-content:center;align-items:center;">Trading Applications</div>
 		<div class="text-white text-center mb-5">With a fundamental understanding of the Fourier Transform, one can start to see applications in the financial sector. With today's capitalization on volatility, it becomes crucial to quantify this aspect of securities.</div>
@@ -243,19 +57,19 @@ $(document).ready(function() {
 	<div class="row mx-5 noMarginPaddingSmallScreen">
 	  <div class="col mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 		<div class="card-body text-center h2">$VOO</div>
-		<button type="button" class="btn btn-outline-dark btn-block mb-2">View Fourier</button></div>
+		<a type="button" href="VOO.html" class="btn btn-outline-dark btn-block mb-2">View Fourier</a></div>
 	  <div class="col mx-3 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 	  	<div class="card-body text-center h2 text-white">$SSO</div>
-		<button type="button" class="btn btn-outline-light btn-block mb-2">View Fourier</button></div>
+		<a type="button" href="SSO.html" class="btn btn-outline-light btn-block mb-2">View Fourier</a></div>
 	  <div class="col mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 	  	<div class="card-body text-center h2">$AAPL</div>
 		<a type="button" href="AAPL.html" class="btn btn-outline-dark btn-block mb-2">View Fourier</a></div>
 	  <div class="col mx-3 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 	  	<div class="card-body text-center h2 text-white">$TSLA</div>
-		<button type="button" class="btn btn-outline-light btn-block mb-2">View Fourier</button></div>
+		<a type="button" href="TSLA.html" class="btn btn-outline-light btn-block mb-2">View Fourier</a></div>
 	  <div class="col mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
 	  	<div class="card-body text-center h2">$KO</div>
-		<button type="button" class="btn btn-outline-dark btn-block mb-2">View Fourier</button></div>
+		<a type="button" href="KO.html" class="btn btn-outline-dark btn-block mb-2">View Fourier</a></div>
 	</div>
 </div>
 
@@ -294,7 +108,7 @@ $(document).ready(function() {
 </div>
 
 <div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
-	<h2 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">About the Fourier</a></h1>      
+	<h2 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="aboutFourier.html">About the Fourier</a></h1>      
 </div>
 
 <div class="container fadein">
@@ -313,7 +127,7 @@ $(document).ready(function() {
 </div>
 
 <div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
-	<h2 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">Trading Applications</a></h1>      
+	<h2 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="tradingApplications.html">Trading Applications</a></h1>      
 </div>
 
 <div class="modal fade" id="aaplModal" role="dialog">
@@ -355,21 +169,21 @@ $(document).ready(function() {
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark"">
   <ul class="navbar-nav mx-auto">
     <li class="nav-item">
-      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>Background on the Fourier</u></a>
-	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Overview</a>
+      <a class="nav-link mx-3 h5 text-white text-center"><u>Background on the Fourier</u></a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="index.html">Overview</a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="aboutFourier.html">About the Fourier Transform</a>
-	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Trading Applications</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="tradingApplications.html">Trading Applications</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>Analysis</u></a>
-	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$VOO</a>
-	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$SSO</a>
+      <a class="nav-link mx-3 h5 text-white text-center"><u>Analysis</u></a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="VOO.html">$VOO</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="SSO.html">$SSO</a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="AAPL.html">$AAPL</a>
-	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$TSLA</a>
-	  <a class="nav-link my-0 p-1 h5 text-center" href="#">$KO</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="TSLA.html">$TSLA</a>
+	  <a class="nav-link my-0 p-1 h5 text-center" href="KO.html">$KO</a>
     </li>
 	<li class="nav-item">
-      <a class="nav-link mx-3 h5 text-white text-center" href="#"><u>About the Author</u></a>
+      <a class="nav-link mx-3 h5 text-white text-center"><u>About the Author</u></a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Current Interests</a>
 	  <a class="nav-link my-0 p-1 h5 text-center" href="#">Portfolio Impacts</a>
     </li>

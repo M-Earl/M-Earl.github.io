@@ -13,6 +13,8 @@
   <script src="fourierAnalysisStockScripts.js"></script>
 </head>
 
+<body>
+
 <nav class="navbar showLargeHeader navbar-expand-sm bg-dark navbar-dark">
   <ul class="navbar-nav mx-auto">
     <a class="btn text-white" type="button" href="index.html">
@@ -93,172 +95,60 @@
 <!END OF HEADER---------------------------------------------------------------------------------> 
 
 <div class="jumbotron mb-3 fadein" style="background-color:black">
-<h1 class="text-center text-white">$AAPL</h1>      
-<p class="text-center text-white">Apple Corporation</p>
+<h1 class="text-center text-white">About the Fourier Transform</h1>      
+<p class="text-center text-white">A Basic Introduction Using Sound</p>
 </div>  
 
-<div class="container fadein showLargeScreen">
+<div class="container fadein">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier Transform works and behaves. The Discrete Fourier Transform (DFT) converts discrete time sequences to discrete frequency based sequences. Now, this sounds confusing without an example. Consider sound. Suppose we have the following A note shown to the right here:
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	    <button type="button" class="btn" data-toggle="modal" data-target="#aaplReturnsModal">
-		  <img src="AAPLReturns.svg" class="img-fluid rounded my-2" alt="Apple">
+	    <button type="button" class="btn" data-toggle="modal" data-target="#cosTwo">
+		  <img src="cosWave.svg" class="img-fluid rounded my-2" alt="Apple">
 		</button>
 	  </div>
 	</div>
 </div>
 
-<div class="container fadein showLargeScreen">
+<div class="container fadein">
 	<div class="row">
       <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModal">
-	      <img src="AAPL.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#cosTwoF">
+		  <img src="cosWaveFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
       </div>
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+		Now to the left is the DFT of the time sequence above. Since all sound is made up of sinusoids, a single note comes as no surprise as being represented by a single cosine. Notice how a single frequnecy is isolated, the frequency that the A note resonates at, XX Hz. This shows how the Fourier Transform can be used to isolate particular frequencies in audio.
 	  </div>
 	</div>
 </div>
 
-<div class="container fadein showLargeScreen">
+<div class="container fadein">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+		Ok well that's interesting but where could it be useful. Well consider the time-based signal on the left. It is made up of three distinct notes: X, X, and X. However, this is by no means clear by simply looking at the signal. So how would one decipher the composition of this signal if they did not know the individual elements?
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
-		  <img src="AAPLFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#cos">
+		  <img src="twoCosWave.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
 	  </div>
 	</div>
 </div>
 
-<div class="container fadein showLargeScreen">
+<div class="container fadein">
 	<div class="row">
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
-		  <img src="freqContent.png" class="img-fluid rounded my-2" alt="Apple Fourier">
+      <div class="col-sm mx-2 mb-3" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#cosF">
+	      <img src="twoCosWaveFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
-	  </div>
+      </div>
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
+		This is where the Fourier Transform shines. Look at the graph at the right. It is now clear what the three frequencies are that make up the sound signal. This has many audio applications. For example, if you know that the basist of your band his instrument at low frequencies, you can isolate the noise in his amp (which will be at higher frequencies) via Fourier Analysis and construct a low pass filter to remove those frequencies. In our example, it would be like allowing the X and X notes to shine through, while removing the undesirable X note.
 	  </div>
 	</div>
-</div>
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	    <button type="button" class="btn" data-toggle="modal" data-target="#aaplReturnsModal">
-		  <img src="AAPLReturns.svg" class="img-fluid rounded my-2" alt="Apple">
-		</button>
-	  </div>
-	</div>
-</div>
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 p-2 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModal">
-	      <img src="AAPL.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
-		</button>
-      </div>
-	</div>
-</div>
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
-		  <img src="AAPLFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
-		</button>
-	  </div>
-	</div>
-</div>
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
-		  <img src="freqContent.PNG" class="img-fluid rounded my-2" alt="Apple Fourier">
-		</button>
-	  </div>
-	</div>
-</div>
-
-<div class="modal fade" id="aaplReturnsModal" role="dialog">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-		<img style="width: 100%" src="AAPLReturns.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="aaplModal" role="dialog">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-		<img style="width: 100%" src="AAPL.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="aaplModalF" role="dialog">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-		<img style="width: 100%" src="AAPLFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="freqContent" role="dialog">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-		<img style="width: 100%" src="freqContent.png" class="img-fluid rounded my-2" alt="Apple Fourier">
-      </div>
-    </div>
-  </div>
 </div>
 
 <!START OF FOOTER------------------------------------------------------------------------------->
