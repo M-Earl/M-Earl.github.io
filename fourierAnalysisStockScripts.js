@@ -2,10 +2,12 @@ function smallSidebarOpenClose() {
 	if (document.getElementById("smallSidebar").style.maxHeight == "25rem")
 	{
 		document.getElementById("smallSidebar").style.maxHeight = "0rem";
+		document.getElementById("smallSidebar").style.marginBottom = "0rem";
 	}
 	else
 	{
 		document.getElementById("smallSidebar").style.maxHeight = "25rem";
+		document.getElementById("smallSidebar").style.marginBottom = "1rem";
 	}
 }
 
