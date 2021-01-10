@@ -25,6 +25,13 @@
 .dropdown {-webkit-appearance: none;}
 .btn-block {-webkit-appearance: none;}
 .webkitFix {-webkit-appearance: none;}
+.modal-header {
+	margin: 0rem; 
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.7rem; 	
+	padding-bottom: 0.7rem; 	
+}
 
 #smallSidebar {
 	transition: max-height 0.5s;
