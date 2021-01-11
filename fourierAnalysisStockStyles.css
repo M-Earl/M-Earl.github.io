@@ -18,6 +18,15 @@
 .btn-outline-dark:hover {
 	background-color: black;
 }
+.jumbotron {
+	border-radius: 0px !important;
+}
+#smallSidebar {
+	border-radius: 0px !important;
+}
+.navbar {
+	border-radius: 0px !important;
+}
 .dropdown-menu :hover { background-color: #40ff00;}
 .dropdown-menu { background-color: grey;}
 .dropdown-menu { margin: 0;}
