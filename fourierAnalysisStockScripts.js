@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 	$('.fadein').each( function(i){
 
-		var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 250;
+		var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 350;
 		var bottomWindow = $(window).scrollTop() + $(window).height();
 
 		/* If the object is completely visible in the window, fade it it */
@@ -32,7 +32,7 @@ $(document).ready(function() {
         /* Check the location of each desired element */
         $('.fadein').each( function(i){
 
-            var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 200;
+            var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 300;
             var bottomWindow = $(window).scrollTop() + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
