@@ -32,7 +32,10 @@
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
 		<p class="m-3">
 		$VOO ETF is low in the group when it comes to volatility. Its return chart is shown. Note that $VOO is an ETF that tracks the S&P 500.
-	  	</p>
+	  	The data is normalized to ensure that higher numbers do now show greater volatility artificially. When this is done, it is clearer that $VOO tends to be low in volatility.
+		The Fourier magnitude of $VOO is highlighted. One can see that the Fourier magnitude is relatively low compared to the group. This is also shown in the table statistics as well.
+		One can see that $VOO ends at the bottom of Fourier Magnitude. This is expected as the volatility is relatively low compared to these other securities.
+		</p>
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	    <button type="button" class="btn" data-toggle="modal" data-target="#aaplReturnsModal">
@@ -49,21 +52,6 @@
 	      <img src="VOONormalized.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
       </div>
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		The data is normalized to ensure that higher numbers do now show greater volatility artificially. When this is done, it is clearer that $VOO tends to be low in volatility.
-		</p>
-	  </div>
-	</div>
-</div>
-
-<div class="container fadein showLargeScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		The Fourier magnitude of $VOO is highlighted. One can see that the Fourier magnitude is relatively low compared to the group. This is also shown in the table statistics as well.
-		</p>
-	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
 		  <img src="VOOFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
@@ -79,10 +67,10 @@
 		  <img src="freqContent.PNG" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
 	  </div>
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		One can see that $VOO ends at the bottom of Fourier Magnitude. This is expected as the volatility is relatively low compared to these other securities.
-		</p>
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
+		  <img src="standardDeviation.PNG" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
 	  </div>
 	</div>
 </div>
@@ -96,7 +84,9 @@
 <div class="container fadein showSmallScreen">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		<p class="m-3">
 		$VOO ETF is low in the group when it comes to volatility. Its return chart is shown. Note that $VOO is an ETF that tracks the S&P 500.
+		</p>
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	    <button type="button" class="btn" data-toggle="modal" data-target="#aaplReturnsModal">
@@ -109,7 +99,9 @@
 <div class="container fadein showSmallScreen">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		<p class="m-3">
 		The data is normalized to ensure that higher numbers do now show greater volatility artificially. When this is done, it is clearer that $VOO tends to be low in volatility.
+		</p>
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModal">
@@ -122,7 +114,9 @@
 <div class="container fadein showSmallScreen">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		<p class="m-3">
 		The Fourier magnitude of $VOO is highlighted. One can see that the Fourier magnitude is relatively low compared to the group. This is also shown in the table statistics as well.
+		</p>
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
@@ -135,11 +129,33 @@
 <div class="container fadein showSmallScreen">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		<p class="m-3">
 		One can see that $VOO ends at the bottom of Fourier Magnitude. This is expected as the volatility is relatively low compared to these other securities.
+		</p>
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
 		  <img src="freqContent.PNG" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
+	  </div>
+	</div>
+</div>
+
+<div class="container fadein showSmallScreen">
+	<div class="row">
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
+		  <img src="standardDeviation.PNG" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
+	  </div>
+	</div>
+</div>
+
+<div class="container fadein showSmallScreen">
+	<div class="row">
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
+		  <img src="standardDeviation.PNG" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
 	  </div>
 	</div>

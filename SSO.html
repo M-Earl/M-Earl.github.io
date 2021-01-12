@@ -30,7 +30,12 @@
 <div class="container fadein showLargeScreen">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		<p class="m-3">
 		$SSO ETF is moderate in the group when it comes to volatility. Its return chart is shown. Note that $SSO is a 2x leveraged stock of the S&P 500.
+		The data is normalized to ensure that higher numbers do now show greater volatility artificially. When this is done, it is clearer that $SSO tends to be moderate in volatility.
+		The Fourier magnitude of $SSO is highlighted. One can see that the Fourier magnitude is relatively moderate compared to the group. This is also shown in the table statistics as well.
+		One can see that $SSO ends in the middle for Fourier Magnitude. This is expected as the volatility is relatively moderate compared to these other securities.		
+		</p>
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	    <button type="button" class="btn" data-toggle="modal" data-target="#aaplReturnsModal">
@@ -47,17 +52,6 @@
 	      <img src="SSONormalized.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
       </div>
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The data is normalized to ensure that higher numbers do now show greater volatility artificially. When this is done, it is clearer that $SSO tends to be moderate in volatility.
-	  </div>
-	</div>
-</div>
-
-<div class="container fadein showLargeScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		The Fourier magnitude of $SSO is highlighted. One can see that the Fourier magnitude is relatively moderate compared to the group. This is also shown in the table statistics as well.
-	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
 		  <img src="SSOFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
@@ -73,8 +67,10 @@
 		  <img src="freqContent.PNG" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
 	  </div>
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		One can see that $SSO ends in the middle for Fourier Magnitude. This is expected as the volatility is relatively moderate compared to these other securities.
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
+		  <img src="standardDeviation.PNG" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
 	  </div>
 	</div>
 </div>
@@ -88,7 +84,9 @@
 <div class="container fadein showSmallScreen">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		<p class="m-3">
 		$SSO ETF is moderate in the group when it comes to volatility. Its return chart is shown. Note that $SSO is a 2x leveraged stock of the S&P 500.
+		</p>
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	    <button type="button" class="btn" data-toggle="modal" data-target="#aaplReturnsModal">
@@ -101,7 +99,9 @@
 <div class="container fadein showSmallScreen">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		<p class="m-3">
 		The data is normalized to ensure that higher numbers do now show greater volatility artificially. When this is done, it is clearer that $SSO tends to be moderate in volatility.
+		</p>
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModal">
@@ -114,7 +114,9 @@
 <div class="container fadein showSmallScreen">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		<p class="m-3">
 		The Fourier magnitude of $SSO is highlighted. One can see that the Fourier magnitude is relatively moderate compared to the group. This is also shown in the table statistics as well.
+		</p>
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#aaplModalF">
@@ -127,11 +129,23 @@
 <div class="container fadein showSmallScreen">
 	<div class="row">
 	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
+		<p class="m-3">
 		One can see that $SSO ends in the middle for Fourier Magnitude. This is expected as the volatility is relatively moderate compared to these other securities.
+		</p>
 	  </div>
 	  <div class="col-sm mx-2 mb-3" style="background-color:black">
 	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
 		  <img src="freqContent.PNG" class="img-fluid rounded my-2" alt="Apple Fourier">
+		</button>
+	  </div>
+	</div>
+</div>
+
+<div class="container fadein showSmallScreen">
+	<div class="row">
+	  <div class="col-sm mx-2 mb-3" style="background-color:black">
+	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
+		  <img src="standardDeviation.PNG" class="img-fluid rounded my-2" alt="Apple Fourier">
 		</button>
 	  </div>
 	</div>
