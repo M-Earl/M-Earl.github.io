@@ -82,7 +82,7 @@
 	background-color: #6c757d;
   }
   #footer {
-	margin-left: 10rem;
-	margin-right: 10rem;
+	padding-left: 10rem;
+	padding-right: 10rem;
   }
 }
