@@ -1,245 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Fourier Stock Analysis</title>
   <meta charset="utf-8">
-  <link rel="icon" href="logo.ico">
+  <title>$KO — Fourier Stock Analysis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="description" content="Fourier analysis of Coca-Cola stock volatility.">
+  <link rel="icon" href="logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="fourierAnalysisStockStyles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="fourierAnalysisStockScripts.js"></script>
 </head>
 
 <body>
 <div id="header"></div>
 
-<!END OF HEADER--------------------------------------------------------------------------------->
-<!END OF HEADER---------------------------------------------------------------------------------> 
-<!END OF HEADER---------------------------------------------------------------------------------> 
-<!END OF HEADER---------------------------------------------------------------------------------> 
-<!END OF HEADER---------------------------------------------------------------------------------> 
-
-<div class="jumbotron mb-3 fadein" style="background-color:black">
-<h1 class="text-center text-white">$KO</h1>      
-<p class="text-center text-white">Coca-Cola Corporation</p>
-</div>  
-
-<div class="container fadein showLargeScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		$KO stock is low in the group when it comes to volatility. Its return chart is shown. Note that $KO has a low P/E ratio, is a mature company, and has a high dividend yield.
-		The data is normalized to ensure that higher numbers do now show greater volatility artificially. When this is done, it is clearer that $KO tends to be lower in volatility.
-		The Fourier magnitude of $KO is highlighted. One can see that the Fourier magnitude is relatively low compared to the group. This is also shown in the table statistics as well.
-		One can see that $KO ends near the bottom for Fourier Magnitude. This is expected as the volatility is relatively low compared to these other securities.		
-		</p>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	    <button type="button" class="btn" data-toggle="modal" data-target="#returnsModal">
-		  <img src="KOReturns.svg" class="img-fluid rounded my-2" alt="KO Returns">
-		</button>
-	  </div>
-	</div>
+<!-- ── Hero ──────────────────────────────────────────── -->
+<div class="page-hero fadein">
+  <div class="site-container">
+    <span class="ticker-display">$KO</span>
+    <p class="subtitle">Coca-Cola Corporation</p>
+  </div>
 </div>
 
-<div class="container fadein showLargeScreen">
-	<div class="row">
-      <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#normalizedModal">
-	      <img src="KONormalized.svg" class="img-fluid rounded my-2" alt="KO Normalized">
-		</button>
+<!-- ── Analysis ──────────────────────────────────────── -->
+<div class="site-container">
+  <section class="analysis-section">
+
+    <div class="analysis-pair fadein">
+      <div class="analysis-text">
+        <p>
+          $KO stock is low in the group when it comes to volatility. Its return chart is shown.
+          Note that $KO has a low P/E ratio, is a mature company, and has a high dividend yield.
+          The data is normalized to ensure that higher numbers do not show greater volatility artificially.
+          When this is done, it is clearer that $KO tends to be lower in volatility.
+          The Fourier magnitude of $KO is highlighted. One can see that the Fourier magnitude is
+          relatively low compared to the group. This is also shown in the table statistics as well.
+          One can see that $KO ends near the bottom for Fourier Magnitude. This is expected as
+          the volatility is relatively low compared to these other securities.
+        </p>
       </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#fourierModal">
-		  <img src="KOFourier.svg" class="img-fluid rounded my-2" alt="KO Fourier">
-		</button>
-	  </div>
-	</div>
-</div>
-
-<div class="container fadein showLargeScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3" style="background-color:black;display:flex;justify-content:center;align-items:center;">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
-		  <img src="freqContent.PNG" class="img-fluid rounded my-2" alt="Frequency Content">
-		</button>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#stdDeviation">
-		  <img src="StdDevVsMeanFFT.svg" class="img-fluid rounded my-2" alt="Standard Deviation">
-		</button>
-	  </div>
-	</div>
-</div>
-
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		$KO stock is low in the group when it comes to volatility. Its return chart is shown. Note that $KO has a low P/E ratio, is a mature company, and has a high dividend yield.
-		</p>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	    <button type="button" class="btn" data-toggle="modal" data-target="#returnsModal">
-		  <img src="KOReturns.svg" class="img-fluid rounded my-2" alt="KO Returns">
-		</button>
-	  </div>
-	</div>
-</div>
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		The data is normalized to ensure that higher numbers do now show greater volatility artificially. When this is done, it is clearer that $KO tends to be lower in volatility.
-		</p>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#normalizedModal">
-	      <img src="KONormalized.svg" class="img-fluid rounded my-2" alt="KO Normalized">
-		</button>
-      </div>
-	</div>
-</div>
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		The Fourier magnitude of $KO is highlighted. One can see that the Fourier magnitude is relatively low compared to the group. This is also shown in the table statistics as well.
-		</p>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#fourierModal">
-		  <img src="KOFourier.svg" class="img-fluid rounded my-2" alt="KO Fourier">
-		</button>
-	  </div>
-	</div>
-</div>
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		One can see that $KO ends near the bottom for Fourier Magnitude. This is expected as the volatility is relatively low compared to these other securities.
-		</p>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#freqContent">
-		  <img src="freqContent.PNG" class="img-fluid rounded my-2" alt="Frequency Content">
-		</button>
-	  </div>
-	</div>
-</div>
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#standardDeviation">
-		  <img src="StdDevVsMeanFFT.svg" class="img-fluid rounded my-2" alt="Standard Deviation">
-		</button>
-	  </div>
-	</div>
-</div>
-
-<!START OF MODALS------------------------------------------------------------------------------->
-<!START OF MODALS------------------------------------------------------------------------------->
-<!START OF MODALS------------------------------------------------------------------------------->
-<!START OF MODALS------------------------------------------------------------------------------->
-<!START OF MODALS------------------------------------------------------------------------------->
-
-<div class="modal fade" id="returnsModal" role="dialog">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
+      <div class="chart-card">
+        <button data-bs-toggle="modal" data-bs-target="#returnsModal" aria-label="Expand KO Returns chart">
+          <img src="KOReturns.svg" alt="KO Returns">
         </button>
       </div>
-      <div class="modal-body">
-		<img style="width: 100%" src="KOReturns.svg" class="img-fluid rounded my-2" alt="KO Returns">
+    </div>
+
+    <div class="image-row fadein">
+      <div class="chart-card">
+        <button data-bs-toggle="modal" data-bs-target="#normalizedModal" aria-label="Expand KO Normalized chart">
+          <img src="KONormalized.svg" alt="KO Normalized">
+        </button>
       </div>
+      <div class="chart-card">
+        <button data-bs-toggle="modal" data-bs-target="#fourierModal" aria-label="Expand KO Fourier chart">
+          <img src="KOFourier.svg" alt="KO Fourier">
+        </button>
+      </div>
+    </div>
+
+    <div class="image-row fadein">
+      <div class="chart-card">
+        <button data-bs-toggle="modal" data-bs-target="#freqModal" aria-label="Expand frequency content table">
+          <img src="freqContent.PNG" alt="Frequency Content">
+        </button>
+      </div>
+      <div class="chart-card">
+        <button data-bs-toggle="modal" data-bs-target="#stdDevModal" aria-label="Expand standard deviation chart">
+          <img src="StdDevVsMeanFFT.svg" alt="Standard Deviation vs Mean FFT">
+        </button>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<!-- ── Modals ─────────────────────────────────────────── -->
+<div class="modal fade" id="returnsModal" tabindex="-1" aria-label="KO Returns">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"><img src="KOReturns.svg" alt="KO Returns"></div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="normalizedModal" role="dialog">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="normalizedModal" tabindex="-1" aria-label="KO Normalized">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-		<img style="width: 100%" src="KONormalized.svg" class="img-fluid rounded my-2" alt="KO Normalized">
-      </div>
+      <div class="modal-body"><img src="KONormalized.svg" alt="KO Normalized"></div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="fourierModal" role="dialog">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="fourierModal" tabindex="-1" aria-label="KO Fourier">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-		<img style="width: 100%" src="KOFourier.svg" class="img-fluid rounded my-2" alt="KO Fourier">
-      </div>
+      <div class="modal-body"><img src="KOFourier.svg" alt="KO Fourier"></div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="freqContent" role="dialog">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="freqModal" tabindex="-1" aria-label="Frequency Content">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-		<img style="width: 100%" src="freqContent.PNG" class="img-fluid rounded my-2" alt="Frequency Content">
-      </div>
+      <div class="modal-body"><img src="freqContent.PNG" alt="Frequency Content"></div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="standardDeviation" role="dialog">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="stdDevModal" tabindex="-1" aria-label="Standard Deviation">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-		<img style="width: 100%" src="StdDevVsMeanFFT.svg" class="img-fluid rounded my-2" alt="Standard Deviation">
-      </div>
+      <div class="modal-body"><img src="StdDevVsMeanFFT.svg" alt="Standard Deviation vs Mean FFT"></div>
     </div>
   </div>
 </div>
-
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
 
 <div id="footer"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="fourierAnalysisStockScripts.js"></script>
 </body>
 </html>

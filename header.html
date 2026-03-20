@@ -1,70 +1,59 @@
-<nav class="navbar showLargeHeader navbar-expand-sm bg-dark navbar-dark">
-  <ul class="navbar-nav mx-auto">
-    <a class="btn text-white" type="button" href="index.html">
-	  <i class="fa fa-home m-2" style="font-size:2rem;color:#40ff00;"></i>
+<nav class="site-nav navbar navbar-expand-lg">
+  <div class="site-container" style="display:flex;align-items:center;width:100%;gap:1rem;">
+
+    <a class="navbar-brand" href="index.html">
+      <i class="fa-solid fa-wave-square"></i> FourierStock
     </a>
-	<div class="dropdown mx-3">
-	  <a class="btn text-white" type="button" href="aboutFourier.html" style="display: inline-flex; align-items: center;">
-	  	<i class="fa fa-arrows-v m-2" style="font-size:2rem;color:#40ff00;"></i>
-		About the Fourier Transform
-	  </a>
-	  <!--<div class="dropdown-menu" style="width:100%;text-align:center;">
-		<a class="dropdown-item text-white" href="aboutFourier.html" type="button">What Is The Fourier?</a>
-		<button class="dropdown-item text-white" type="button">Common Applications</button>
-	  </div>-->
-	</div>
-	<div class="dropdown mx-3">
-	  <a class="btn text-white" type="button" href="tradingApplications.html" style="display: inline-flex; align-items: center;">
-	  	<i class="fa fa-area-chart m-2" style="font-size:2rem;color:#40ff00;"></i>
-		Trading Applications
-	  </a>
-	  <!--<div class="dropdown-menu" style="width:100%;text-align:center;">
-		<button class="dropdown-item text-white" type="button">Trading Applications</button>
-		<button class="dropdown-item text-white" type="button">Current Volatility</button>
-		<button class="dropdown-item text-white" type="button">Fourier Volatility</button>
-	  </div>-->
-	</div>
-	<div class="dropdown mx-3">
-	  <a class="btn text-white" type="button" style="display: inline-flex; align-items: center;">
-	  	<i class="fa fa-check m-2" style="font-size:2rem;color:#40ff00;"></i>
-		Analysis
-	  </a>
-	  <div class="dropdown-menu" style="width:100%;text-align:center;">
-		<a class="dropdown-item text-white" href="VOO.html" type="button">$VOO</a>
-		<a class="dropdown-item text-white" href="SSO.html" type="button">$SSO</a>
-		<a class="dropdown-item text-white" href="AAPL.html" type="button">$AAPL</a>
-		<a class="dropdown-item text-white" href="TSLA.html" type="button">$TSLA</a>
-		<a class="dropdown-item text-white" href="KO.html" type="button">$KO</a>
-	  </div>
-	</div>
-	<div class="dropdown mx-3">
-	  <a class="btn text-white" type="button" href="currentInterests.html" style="display: inline-flex; align-items: center;">
-	  	<i class="fa fa-user-circle m-2" style="font-size:2rem;color:#40ff00;"></i>
-		About the Author
-	  </a>
-	</div>
-  </ul>
+
+    <button class="navbar-toggler ms-auto" type="button"
+            data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fa-solid fa-house"></i> Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="aboutFourier.html">
+            <i class="fa-solid fa-arrows-up-down"></i> About the Fourier Transform
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="tradingApplications.html">
+            <i class="fa-solid fa-chart-area"></i> Trading Applications
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-check"></i> Analysis
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="VOO.html">$VOO</a></li>
+            <li><a class="dropdown-item" href="SSO.html">$SSO</a></li>
+            <li><a class="dropdown-item" href="AAPL.html">$AAPL</a></li>
+            <li><a class="dropdown-item" href="TSLA.html">$TSLA</a></li>
+            <li><a class="dropdown-item" href="KO.html">$KO</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="currentInterests.html">
+            <i class="fa-solid fa-circle-user"></i> About the Author
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
 </nav>
-
-<div class="jumbotron mb-0 px-3 py-1 showSmallHeader bg-dark">
-	<div class="row">
-		<div class="col">
-			<a type="button" href="index.html" class="fa fa-home text-left webkitFix" style="font-size:2rem;color:#40ff00;display:inline-block;width:100%;"></a>
-		</div>
-		<div class="col">
-			<a type="button" onclick="smallSidebarOpenClose()" class="fa fa-bars text-right webkitFix" style="font-size:2rem;color:#40ff00;display:inline-block;width:100%;"></a>
-		</div>
-	</div>
-</div> 
-
-<div class="" style="display:block;max-height:0;" id="smallSidebar">
-	<a href="aboutFourier.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">About the Foruier</a>
-	<a href="tradingApplications.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Trading Applications</a>
-	<a href="VOO.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$VOO</a>
-	<a href="SSO.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$SSO</a>
-	<a href="AAPL.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$AAPL</a>
-	<a href="TSLA.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$TSLA</a>
-	<a href="KO.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">$KO</a>
-	<a href="currentInterests.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Current Interests</a>
-	<a href="portfolioImpacts.html" id="smallSidebarItem" style="background-color: #4d4d4d" class="btn btn-block text-white">Portfolio Impacts</a>
-</div>

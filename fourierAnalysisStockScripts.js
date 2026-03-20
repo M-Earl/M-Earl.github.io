@@ -1,62 +1,35 @@
-function smallSidebarOpenClose() {
-	if (document.getElementById("smallSidebar").style.maxHeight == "25rem")
-	{
-		document.getElementById("smallSidebar").style.maxHeight = "0rem";
-		document.getElementById("smallSidebar").style.marginBottom = "0rem";
-	}
-	else
-	{
-		document.getElementById("smallSidebar").style.maxHeight = "25rem";
-		document.getElementById("smallSidebar").style.marginBottom = "0.35rem";
-	}
+/* =========================================================
+   Fourier Stock Analysis — Scripts (Vanilla JS, no jQuery)
+   ========================================================= */
+
+// ── Load header & footer components ──────────────────────
+async function loadComponent(id, url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return;
+    const html = await res.text();
+    document.getElementById(id).innerHTML = html;
+  } catch (e) {
+    // Silently ignore (e.g. offline / direct file:// open)
+  }
 }
 
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', () => {
+  loadComponent('header', 'header.html');
+  loadComponent('footer', 'footer.html');
 
-	$('.fadein').each( function(i){
+  // ── Scroll-triggered fade-in via IntersectionObserver ──
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
 
-		var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 350;
-		var bottomWindow = $(window).scrollTop() + $(window).height();
-
-		/* If the object is completely visible in the window, fade it it */
-		if( bottomWindow > bottomObjectAdjusted ){
-
-			$(this).animate({'opacity':'1'},500);
-
-		}
-
-	}); 
-	
-	/* Every time the window is scrolled ... */
-    $(window).scroll( function(){
-        /* Check the location of each desired element */
-        $('.fadein').each( function(i){
-
-            var bottomObjectAdjusted = $(this).position().top + $(this).outerHeight() - 300;
-            var bottomWindow = $(window).scrollTop() + $(window).height();
-
-            /* If the object is completely visible in the window, fade it it */
-            if( bottomWindow > bottomObjectAdjusted ){
-
-                $(this).animate({'opacity':'1'},500);
-
-            }
-
-        }); 
-
-    });
-	
-	if ($(window).width() < 767) {
-		$('.fadein').each( function(i){
-			$(this).animate({'opacity':'1'},500);
-		});
-	}
-});
-
-$(function(){
-	$("#header").load("header.html");
-});
-
-$(function(){
-	$("#footer").load("footer.html");
+  document.querySelectorAll('.fadein').forEach(el => observer.observe(el));
 });

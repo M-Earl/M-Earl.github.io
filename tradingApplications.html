@@ -1,106 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Fourier Stock Analysis</title>
   <meta charset="utf-8">
-  <link rel="icon" href="logo.ico">
+  <title>Trading Applications — Fourier Stock Analysis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="description" content="How the Fourier Transform can be applied to measure volatility in securities.">
+  <link rel="icon" href="logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="fourierAnalysisStockStyles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="fourierAnalysisStockScripts.js"></script>
 </head>
 
 <body>
 <div id="header"></div>
 
-<!END OF HEADER--------------------------------------------------------------------------------->
-<!END OF HEADER---------------------------------------------------------------------------------> 
-<!END OF HEADER---------------------------------------------------------------------------------> 
-<!END OF HEADER---------------------------------------------------------------------------------> 
-<!END OF HEADER---------------------------------------------------------------------------------> 
-
-<div class="jumbotron mb-3 fadein" style="background-color:black">
-	<h1 class="text-center text-white">Trading Applications of the Fourier Transform</h1>      
-	<p class="text-center text-white">Measuring Volatility Through the Fourier Transform</p>
-</div>  
-
-<div class="container fadein showLargeScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		The next step is to take a look at how the Fourier Transform can be applied to securities. Consider the figure shown. It is an upwards linear trend with two cosines added. Now this is starting to look more like an actual stock progression. The key difference is that this chart has fundamental frequencies to it.
-		</p>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	    <button type="button" class="btn" data-toggle="modal" data-target="#cosTwo">
-		  <img src="tradingApplications.svg" class="img-fluid rounded my-2" alt="Apple">
-		</button>
-	  </div>
-	</div>
+<!-- ── Hero ──────────────────────────────────────────── -->
+<div class="page-hero fadein">
+  <div class="site-container">
+    <span class="section-label">Application</span>
+    <h1>Trading Applications of the Fourier Transform</h1>
+    <p class="subtitle">Measuring Volatility Through the Fourier Transform</p>
+  </div>
 </div>
 
-<div class="container fadein showLargeScreen">
-	<div class="row">
-      <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#cosTwoF">
-		  <img src="tradingApplicationsFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
-		</button>
+<!-- ── Content ───────────────────────────────────────── -->
+<div class="site-container">
+  <section class="analysis-section">
+
+    <!-- Block 1 -->
+    <div class="analysis-pair fadein">
+      <div class="analysis-text">
+        <p>
+          The next step is to take a look at how the Fourier Transform can be applied to securities.
+          Consider the figure shown. It is an upwards linear trend with two cosines added. Now this
+          is starting to look more like an actual stock progression. The key difference is that this
+          chart has fundamental frequencies to it.
+        </p>
       </div>
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		These fundamental frequencies shine through in the Fourier Transform. One can see the linear trend causes a high amplitude at lower frequencies. However, the two fundamental frequencies show up clearly in the Fourier Transform. The issue is that real stock returns do not have underlying frequencies, like sounds does. However, there should still be higher amplitudes in the Fourier Transform to account for the increasing oscillatory behavior of volatile stocks.
-		</p>
-	  </div>
-	</div>
-</div>
-
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		The next step is to take a look at how the Fourier Transform can be applied to securities. Consider the figure shown. It is an upwards linear trend with two cosines added. Now this is starting to look more like an actual stock progression. The key difference is that this chart has fundamental frequencies to it.
-		</p>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black">
-	    <button type="button" class="btn" data-toggle="modal" data-target="#cosTwo">
-		  <img src="tradingApplications.svg" class="img-fluid rounded my-2" alt="Apple">
-		</button>
-	  </div>
-	</div>
-</div>
-
-<div class="container fadein showSmallScreen">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3 text-white" style="background-color:black; text-justify: inter-word; display:flex;justify-content:center;align-items:center;">
-		<p class="m-3">
-		These fundamental frequencies shine through in the Fourier Transform. One can see the linear trend causes a high amplitude at lower frequencies. However, the two fundamental frequencies show up clearly in the Fourier Transform. The issue is that real stock returns do not have underlying frequencies, like sounds does. However, there should still be higher amplitudes in the Fourier Transform to account for the increasing oscillatory behavior of volatile stocks.
-		</p>
-	  </div>
-      <div class="col-sm mx-2 mb-3" style="background-color:black">
-	  	<button type="button" class="btn" data-toggle="modal" data-target="#cosTwoF">
-		  <img src="tradingApplicationsFourier.svg" class="img-fluid rounded my-2" alt="Apple Fourier">
-		</button>
+      <div class="chart-card">
+        <button data-bs-toggle="modal" data-bs-target="#tradingAppModal" aria-label="Expand trading applications chart">
+          <img src="tradingApplications.svg" alt="Trading Applications Signal">
+        </button>
       </div>
-	</div>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="analysis-pair fadein">
+      <div class="chart-card">
+        <button data-bs-toggle="modal" data-bs-target="#tradingFourierModal" aria-label="Expand trading applications Fourier chart">
+          <img src="tradingApplicationsFourier.svg" alt="Trading Applications Fourier">
+        </button>
+      </div>
+      <div class="analysis-text">
+        <p>
+          These fundamental frequencies shine through in the Fourier Transform. One can see the linear
+          trend causes a high amplitude at lower frequencies. However, the two fundamental frequencies
+          show up clearly in the Fourier Transform. The issue is that real stock returns do not have
+          underlying frequencies, like sound does. However, there should still be higher amplitudes
+          in the Fourier Transform to account for the increasing oscillatory behavior of volatile stocks.
+        </p>
+      </div>
+    </div>
+
+  </section>
 </div>
 
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
+<!-- ── Modals ─────────────────────────────────────────── -->
+<div class="modal fade" id="tradingAppModal" tabindex="-1" aria-label="Trading Applications">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"><img src="tradingApplications.svg" alt="Trading Applications Signal"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="tradingFourierModal" tabindex="-1" aria-label="Trading Applications Fourier">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"><img src="tradingApplicationsFourier.svg" alt="Trading Applications Fourier"></div>
+    </div>
+  </div>
+</div>
 
 <div id="footer"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="fourierAnalysisStockScripts.js"></script>
 </body>
 </html>

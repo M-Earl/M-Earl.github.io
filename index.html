@@ -1,275 +1,222 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Fourier Stock Analysis</title>
   <meta charset="utf-8">
-  <link rel="icon" href="logo.ico">
+  <title>Fourier Stock Analysis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="description" content="A detailed investigation into the use of the Fourier Transform to measure volatility on the US stock market.">
+  <link rel="icon" href="logo.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="fourierAnalysisStockStyles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="fourierAnalysisStockScripts.js"></script>
 </head>
 
 <body>
 <div id="header"></div>
 
-<!END OF HEADER--------------------------------------------------------------------------------->
-<!END OF HEADER---------------------------------------------------------------------------------> 
-<!END OF HEADER---------------------------------------------------------------------------------> 
-<!END OF HEADER---------------------------------------------------------------------------------> 
-<!END OF HEADER---------------------------------------------------------------------------------> 
-
-<div class="jumbotron mb-3 fadein" style="background-color:black">
-	<h1 class="text-center text-white">Fourier Analysis and Stock Volatility</h1>      
-	<p class="text-center text-white">A Detailed Investigation into the Use of the Fourier Transform to Measure Volatility on the US Stock Market</p>
+<!-- ── Hero ──────────────────────────────────────────── -->
+<div class="page-hero fadein">
+  <div class="site-container">
+    <span class="section-label">Frequency Analysis</span>
+    <h1>Fourier Analysis and Stock Volatility</h1>
+    <p class="subtitle">A Detailed Investigation into the Use of the Fourier Transform to Measure Volatility on the US Stock Market</p>
+  </div>
 </div>
 
-<div class="container showLargeScreen fadein">
-	<div class="row">
-	  <a class="col-sm focus mx-2 mb-3" style="background-color:black;" href="aboutFourier.html">
-		<i class="fa fa-bell m-2" style="font-size:10rem;color:#40ff00;display:inline-block;width:100%;text-align:center;"></i>
-	  	<div class="text-white h1 m-5 text-center" style="height:5rem;display:flex;justify-content:center;align-items:center;">About the Fourier</div>
-		<div class="text-white text-center mb-5">The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.</div>
-	  </a>
-	  <a class="col-sm focus mx-2 mb-3" style="background-color:black;" href="tradingApplications.html">
-		<i class="fa fa-area-chart m-2" style="font-size:10rem;color:#40ff00;display:inline-block;width:100%;text-align:center;"></i>
-	  	<div class="text-white h1 m-5 text-center" style="height:5rem;display:flex;justify-content:center;align-items:center;">Trading Applications</div>
-		<div class="text-white text-center mb-5">With a fundamental understanding of the Fourier Transform, one can start to see applications in the financial sector. With today's capitalization on volatility, it becomes crucial to quantify this aspect of securities.</div>
-	  </a>
-	  <a class="col-sm focus mx-2 mb-3" style="background-color:black;" href="AAPL.html">
-		<i class="fa fa-check m-2" style="font-size:10rem;color:#40ff00;display:inline-block;width:100%;text-align:center;"></i>
-	  	<div class="text-white h1 m-5 text-center" style="height:5rem;display:flex;justify-content:center;align-items:center;">Analysis</div>
-		<div class="text-white text-center mb-5">A few example securities are examined to give real applications of this process. By contrasting them, patterns can be seen to show how volatility can be measured via the Fourier.</div>
-	  </a>
-	</div>
+<!-- ── Navigation Cards ──────────────────────────────── -->
+<div class="site-container">
+  <div class="nav-cards-row fadein">
+
+    <a class="nav-card" href="aboutFourier.html">
+      <i class="fa-solid fa-wave-square card-icon"></i>
+      <h2>About the Fourier</h2>
+      <p>The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.</p>
+    </a>
+
+    <a class="nav-card" href="tradingApplications.html">
+      <i class="fa-solid fa-chart-area card-icon"></i>
+      <h2>Trading Applications</h2>
+      <p>With a fundamental understanding of the Fourier Transform, one can start to see applications in the financial sector. With today's capitalization on volatility, it becomes crucial to quantify this aspect of securities.</p>
+    </a>
+
+    <a class="nav-card" href="AAPL.html">
+      <i class="fa-solid fa-check card-icon"></i>
+      <h2>Analysis</h2>
+      <p>A few example securities are examined to give real applications of this process. By contrasting them, patterns can be seen to show how volatility can be measured via the Fourier.</p>
+    </a>
+
+  </div>
+
+  <!-- ── Ticker Strip ─────────────────────────────────── -->
+  <div class="ticker-strip fadein">
+    <a class="ticker-card" href="VOO.html">
+      <span class="sym">$VOO</span>
+      <span class="view-btn">View Fourier</span>
+    </a>
+    <a class="ticker-card" href="SSO.html">
+      <span class="sym">$SSO</span>
+      <span class="view-btn">View Fourier</span>
+    </a>
+    <a class="ticker-card" href="AAPL.html">
+      <span class="sym">$AAPL</span>
+      <span class="view-btn">View Fourier</span>
+    </a>
+    <a class="ticker-card" href="TSLA.html">
+      <span class="sym">$TSLA</span>
+      <span class="view-btn">View Fourier</span>
+    </a>
+    <a class="ticker-card" href="KO.html">
+      <span class="sym">$KO</span>
+      <span class="view-btn">View Fourier</span>
+    </a>
+  </div>
+
+  <!-- ── Preview Gallery: AAPL ────────────────────────── -->
+  <div class="image-row fadein">
+    <div class="chart-card">
+      <button data-bs-toggle="modal" data-bs-target="#returnsModal" aria-label="Expand AAPL Returns chart">
+        <img src="AAPLReturns.svg" alt="AAPL Returns">
+      </button>
+    </div>
+    <div class="chart-card">
+      <button data-bs-toggle="modal" data-bs-target="#fourierModal" aria-label="Expand AAPL Fourier chart">
+        <img src="AAPLFourier.svg" alt="AAPL Fourier">
+      </button>
+    </div>
+  </div>
+
+  <div class="continue-section fadein">
+    <a class="continue-link" href="AAPL.html">
+      Continue to $AAPL <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <!-- ── Preview Gallery: Cosine ──────────────────────── -->
+  <div class="image-row fadein">
+    <div class="chart-card">
+      <button data-bs-toggle="modal" data-bs-target="#cosModal" aria-label="Expand cosine wave chart">
+        <img src="cosWave.svg" alt="Cosine Wave">
+      </button>
+    </div>
+    <div class="chart-card">
+      <button data-bs-toggle="modal" data-bs-target="#cosFourierModal" aria-label="Expand cosine Fourier chart">
+        <img src="cosWaveFourier.svg" alt="Cosine Wave Fourier">
+      </button>
+    </div>
+  </div>
+
+  <div class="continue-section fadein">
+    <a class="continue-link" href="aboutFourier.html">
+      Continue to About the Fourier <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <!-- ── Preview Gallery: Trading Applications ─────────── -->
+  <div class="image-row fadein">
+    <div class="chart-card">
+      <button data-bs-toggle="modal" data-bs-target="#tradingAppModal" aria-label="Expand trading applications chart">
+        <img src="tradingApplications.svg" alt="Trading Applications">
+      </button>
+    </div>
+    <div class="chart-card">
+      <button data-bs-toggle="modal" data-bs-target="#tradingFourierModal" aria-label="Expand trading applications Fourier chart">
+        <img src="tradingApplicationsFourier.svg" alt="Trading Applications Fourier">
+      </button>
+    </div>
+  </div>
+
+  <div class="continue-section fadein">
+    <a class="continue-link" href="tradingApplications.html">
+      Continue to Trading Applications <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
 </div>
 
-<div class="container showLargeScreen fadein">
-	<div class="row mx-5">
-	  <div class="col mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-		<div class="card-body text-center h2">$VOO</div>
-		<a type="button" href="VOO.html" class="btn btn-outline-dark btn-block mb-2 webkitFix">View Fourier</a></div>
-	  <div class="col mx-3 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  	<div class="card-body text-center h2 text-white">$SSO</div>
-		<a type="button" href="SSO.html" class="btn btn-outline-light btn-block mb-2 webkitFix">View Fourier</a></div>
-	  <div class="col mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  	<div class="card-body text-center h2">$AAPL</div>
-		<a type="button" href="AAPL.html" class="btn btn-outline-dark btn-block mb-2 webkitFix">View Fourier</a></div>
-	  <div class="col mx-3 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  	<div class="card-body text-center h2 text-white">$TSLA</div>
-		<a type="button" href="TSLA.html" class="btn btn-outline-light btn-block mb-2 webkitFix">View Fourier</a></div>
-	  <div class="col mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  	<div class="card-body text-center h2">$KO</div>
-		<a type="button" href="KO.html" class="btn btn-outline-dark btn-block mb-2 webkitFix">View Fourier</a></div>
-	</div>
-</div>
-
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-<!SWITCH FROM LARGE TO SMALL SCREEN------------------------------------------------------------->
-
-<div class="container showSmallScreen fadein">
-	<a class="btn text-white mb-3 webkitFix" type="button" style="background-color:black;width:100%;" href="aboutFourier.html">
-	  <i class="fa fa-bell m-2" style="font-size:2rem;color:#40ff00;"></i>
-      <h5>About the Fourier</h5>
-	  <div class="text-white text-center mb-3">The first step in understanding frequency analysis of stocks is understanding how one arrives at the frequency domain data. To do this, one must examine how the Fourier transform works and behaves.</div>
-	</a>
-	<a class="btn text-white mb-3 webkitFix" type="button" style="background-color:black;width:100%;" href="tradingApplications.html">
-	  <i class="fa fa-area-chart m-2" style="font-size:2rem;color:#40ff00;"></i>
-      <h5>Trading Applications</h5>
-	  <div class="text-white text-center mb-3">With a fundamental understanding of the Fourier Transform, one can start to see applications in the financial sector. With today's capitalization on volatility, it becomes crucial to quantify this aspect of securities.</div>
-	</a>
-	<a class="btn text-white mb-3 webkitFix" type="button" style="background-color:black;width:100%;" href="AAPL.html">
-	  <i class="fa fa-check m-2" style="font-size:2rem;color:#40ff00;"></i>
-	  <h5>Analysis</h5>
-	  <div class="text-white text-center mb-3">A few example securities are examined to give real applications of this process. By contrasting them, patterns can be seen to show how volatility can be measured via the Fourier.</div>
-	</a>
-</div>
-
-<div class="container showSmallScreen fadein">
-	<div class="mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <div class="card-body text-center h2">$VOO</div>
-	  <a type="button" href="VOO.html" class="btn btn-outline-dark mb-2 webkitFix" style="width: 80%;position: relative; right: -10%;">View Fourier</a></div>
-	<div class="mx-3 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <div class="card-body text-center h2 text-white">$SSO</div>
-	  <a type="button" href="SSO.html" class="btn btn-outline-light mb-2 webkitFix" style="width: 80%;position: relative; right: -10%;">View Fourier</a></div>
-	<div class="mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <div class="card-body text-center h2">$AAPL</div>
-	  <a type="button" href="AAPL.html" class="btn btn-outline-dark mb-2 webkitFix" style="width: 80%;position: relative; right: -10%;">View Fourier</a></div>
-	<div class="mx-3 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <div class="card-body text-center h2 text-white">$TSLA</div>
-	  <a type="button" href="TSLA.html" class="btn btn-outline-light mb-2 webkitFix" style="width: 80%;position: relative; right: -10%;">View Fourier</a></div>
-	<div class="mx-3 mb-3" style="background-color:#40ff00;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <div class="card-body text-center h2">$KO</div>
-	  <a type="button" href="KO.html" class="btn btn-outline-dark mb-2 webkitFix" style="width: 80%;position: relative; right: -10%;">View Fourier</a></div>
-</div>
-
-<div class="container fadein">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <button type="button" class="btn" data-toggle="modal" data-target="#returnsModal">
-		<img src="AAPLReturns.svg" class="img-fluid rounded my-2" alt="AAPL Returns">
-	  </button>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <button type="button" class="btn" data-toggle="modal" data-target="#fourierModal">
-		<img src="AAPLFourier.svg" class="img-fluid rounded my-2" alt="AAPL Fourier">
-	  </button>
-	  </div>
-	</div>
-</div>
-
-<div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
-	<h2 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="AAPL.html">$AAPL</a></h1>      
-</div>
-
-<div class="container fadein">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <button type="button" class="btn" data-toggle="modal" data-target="#cosModal">
-		<img src="cosWave.svg" class="img-fluid rounded my-2" alt="Cosine Wave">
-	  </button>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <button type="button" class="btn" data-toggle="modal" data-target="#cosFourierModal">
-		<img src="cosWaveFourier.svg" class="img-fluid rounded my-2" alt="Cosine Wave Fourier">
-	  </button>
-	  </div>
-	</div>
-</div>
-
-<div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
-	<h2 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="aboutFourier.html">About the Fourier</a></h1>      
-</div>
-
-<div class="container fadein">
-	<div class="row">
-	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <button type="button" class="btn" data-toggle="modal" data-target="#tradingApplications">
-		<img src="tradingApplications.svg" class="img-fluid rounded my-2" alt="Trading Applications">
-	  </button>
-	  </div>
-	  <div class="col-sm mx-2 mb-3" style="background-color:black;box-shadow: .2rem .2rem 1rem .1rem #262626;">
-	  <button type="button" class="btn" data-toggle="modal" data-target="#tradingApplicationsFourier">
-		<img src="tradingApplicationsFourier.svg" class="img-fluid rounded my-2" alt="Trading Applications Fourier">
-	  </button>
-	  </div>
-	</div>
-</div>
-
-<div class="jumbotron mb-3 p-2 fadein" style="background-color:black; width:60%; position: relative; right: -20%;">
-	<h2 class="text-center text-white" id="continueToText">Continue to <a style="color:#40ff00;" href="tradingApplications.html">Trading Applications</a></h1>      
-</div>
-
-<!START OF MODALS------------------------------------------------------------------------------->
-<!START OF MODALS------------------------------------------------------------------------------->
-<!START OF MODALS------------------------------------------------------------------------------->
-<!START OF MODALS------------------------------------------------------------------------------->
-<!START OF MODALS------------------------------------------------------------------------------->
-
-<div class="modal fade" id="returnsModal" role="dialog">
-  <div class="modal-dialog modal-lg">
+<!-- ── Modals ─────────────────────────────────────────── -->
+<div class="modal fade" id="returnsModal" tabindex="-1" aria-label="AAPL Returns">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-		<img style="width: 100%" src="AAPLReturns.svg" class="img-fluid rounded my-2" alt="AAPL Returns">
+        <img src="AAPLReturns.svg" alt="AAPL Returns">
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="fourierModal" role="dialog">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="fourierModal" tabindex="-1" aria-label="AAPL Fourier">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-		<img style="width: 100%" src="AAPLFourier.svg" class="img-fluid rounded my-2" alt="AAPL Fourier">
+        <img src="AAPLFourier.svg" alt="AAPL Fourier">
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="cosModal" role="dialog">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="cosModal" tabindex="-1" aria-label="Cosine Wave">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-		<img style="width: 100%" src=" cosWave.svg" class="img-fluid rounded my-2" alt="Cosine Wave">
+        <img src="cosWave.svg" alt="Cosine Wave">
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="cosFourierModal" role="dialog">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="cosFourierModal" tabindex="-1" aria-label="Cosine Fourier">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-		<img style="width: 100%" src="cosWaveFourier.svg" class="img-fluid rounded my-2" alt="Cos Wave Fourier">
+        <img src="cosWaveFourier.svg" alt="Cosine Wave Fourier">
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="tradingApplications" role="dialog">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="tradingAppModal" tabindex="-1" aria-label="Trading Applications">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-		<img style="width: 100%" src="tradingApplications.svg" class="img-fluid rounded my-2" alt="Trading Applications">
+        <img src="tradingApplications.svg" alt="Trading Applications">
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="tradingApplicationsFourier" role="dialog">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="tradingFourierModal" tabindex="-1" aria-label="Trading Applications Fourier">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<i class="fa fa-close m-0 p-0" style="font-size:1rem;"></i>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-		<img style="width: 100%" src="tradingApplicationsFourier.svg" class="img-fluid rounded my-2" alt="Trading Applications Fourier">
+        <img src="tradingApplicationsFourier.svg" alt="Trading Applications Fourier">
       </div>
     </div>
   </div>
 </div>
-
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
-<!START OF FOOTER------------------------------------------------------------------------------->
 
 <div id="footer"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="fourierAnalysisStockScripts.js"></script>
 </body>
 </html>
